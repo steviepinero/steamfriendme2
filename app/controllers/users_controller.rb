@@ -1,5 +1,70 @@
 class UsersController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :auth_callback
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  def index
+  end
+
+  def auth_callback
+      # Gets the hash from omniauth and sets to auth
+      auth = request.env['omniauth.auth']
+      # p auth
+      # create a current_user session with data to display on view
+      session[:current_user] = { :nickname => auth.info['nickname'],
+                                 :image => auth.info['image'],
+                                 :uid => auth.uid,
+                                 :location => auth.info['location'],
+                                 :name => auth.info['name'],
+                                 :profileurl => auth.info['urls']['Profile'],
+                                 :status => auth.extra['raw_info']['profilestate']
+                                            }
+      # User.create(name: session[:current_user][:nickname])
+      #stevie method of getting recent games in terminal
+
+      #myRecentlyPlayed = Steam::Player.recently_played_games(myId, params: {})
+
+
+      user =
+        User.find_by(provider:auth['provider'], uid: auth['uid']) ||
+        User.create_with_omniauth(auth)
+
+
+      # sends api key through config/intializers
+      Steam.apikey = ENV['STEAM_WEB_API_KEY']
+      # Uses steamid data from current_user session
+      myId = session[:current_user][:uid]
+      # Gets recently played games for user of myId
+      myRecentlyPlayed = Steam::Player.recently_played_games(myId, params: {})
+      # Gets the total_count value of a player within the recently_played_games hash
+      total_count = myRecentlyPlayed['total_count']
+
+
+
+
+      # total_count.times do |i|
+      #   @game = Game.new
+      #   puts myRecentlyPlayed["games"][i]["appid"]
+      #   @game.appid = myRecentlyPlayed["games"][i]["appid"]
+      #   @game.game_name = myRecentlyPlayed["games"][i]["name"]
+      #   @game.playtime = myRecentlyPlayed["games"][i]["playtime_forever"]
+      #   @game.save
+      # end
+      # byebug
+
+      # creates user using auth argument within create_with_omniauth in user model
+      user =
+      User.find_by(provider:auth['provider'], uid: auth['uid']) ||
+      User.create_with_omniauth(auth)
+
+      session[:user_id] = user.id
+      redirect_to root_url, notice: "Signed in!"
+    end
+
+    # logout
+    def destroy
+      session[:user_id] = nil
+      redirect_to root_url, notice: "Signed out!"
+    end
 
   # GET /users
   # GET /users.json
