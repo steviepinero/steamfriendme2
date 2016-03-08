@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
     uid: auth['uid']) ||
     User.create_with_omniauth(auth)
 
-    byebug
     session[:user_id] = user.id
     redirect_to root_url, notice: "Signed in!"
   end
