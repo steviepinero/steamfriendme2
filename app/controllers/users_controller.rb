@@ -39,6 +39,7 @@ class UsersController < ApplicationController
       total_count.times do |i|
         # Sets instance of a new Game
         @game = Game.new
+        @game.user_id = [:current_user][:uid]
         # puts myRecentlyPlayed["games"][i]["appid"]
         # Gets appid. Useful for string interpolation of image url.
         @game.appid = myRecentlyPlayed["games"][i]["appid"]
@@ -51,7 +52,7 @@ class UsersController < ApplicationController
         # saves data from games
         @game.save
       end
-      
+
       # creates user using auth argument within create_with_omniauth in user model
       user =
       User.find_by(provider:auth['provider'], uid: auth['uid']) ||
