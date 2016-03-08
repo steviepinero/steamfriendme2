@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       #stevie method of getting recent games in terminal
       #myRecentlyPlayed = Steam::Player.recently_played_games(myId, params: {})
 
-
+      # This creates a new user if searching by provider and uid don't work.
       user =
         User.find_by(provider:auth['provider'], uid: auth['uid']) ||
         User.create_with_omniauth(auth)
@@ -33,13 +33,13 @@ class UsersController < ApplicationController
       myRecentlyPlayed = Steam::Player.recently_played_games(myId, params: {})
       # Gets the total_count value of a player within the recently_played_games hash
       total_count = myRecentlyPlayed['total_count']
-      byebug
 
 
       total_count.times do |i|
         # Sets instance of a new Game
         @game = Game.new
-        @game.user_id = [:current_user][:uid]
+        # Gets unique id from
+        @game.user_id = user.id
         # puts myRecentlyPlayed["games"][i]["appid"]
         # Gets appid. Useful for string interpolation of image url.
         @game.appid = myRecentlyPlayed["games"][i]["appid"]
@@ -49,14 +49,18 @@ class UsersController < ApplicationController
         @game.playtime = myRecentlyPlayed["games"][i]["playtime_forever"]
         # Gets image icon url. Must be interpolated to view.
         @game.img_icon_url = myRecentlyPlayed["games"][i]["img_icon_url"]
-        # saves data from games
-        @game.save
-      end
 
-      # creates user using auth argument within create_with_omniauth in user model
-      user =
-      User.find_by(provider:auth['provider'], uid: auth['uid']) ||
-      User.create_with_omniauth(auth)
+        # Checks if user is in game database
+         if not(!!Game.find_by(user_id: @game.user_id))
+           @game.save
+        # else if Checks by appid if it is empty, if it is, true. Exclamation marks make true or a false.
+         elsif Game.find_by(appid:@game.appid).nil? && !!Game.find_by(user_id: @game.user_id)
+        # if temp.appid = @game.appid
+        #   break
+          @game.save # saves data from games
+        end
+      end
+      byebug
 
       session[:user_id] = user.id
       redirect_to root_url, notice: "Signed in!"
