@@ -18,9 +18,10 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
-  post '/rate' => 'rater#create', :as => 'rate'
-  get 'ratings/rate_user'
-  get 'user/rate'
+  # We don't have any ratings yet - steve
+  # post '/rate' => 'rater#create', :as => 'rate'
+  # get 'ratings/rate_user'
+  # get 'user/rate'
 
   get 'ratings/your_rating'
 
