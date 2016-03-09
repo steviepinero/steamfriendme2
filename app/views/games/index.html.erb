@@ -14,9 +14,9 @@
 
   <div class="usercolumn">
     <div class="usercontent">
-    <center><h3> User </h3>
+    <center><h3> Welcome  <%= current_user.nickname %> </h3>
    <%= image_tag session[:current_user]["image"] %>
-             <br><%= current_user.name %>'s Games </th>
+             <br><%= current_user.name %> also known as </th>
                <br><%= current_user.nickname %>
               <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
 
@@ -32,10 +32,11 @@
           <center><h3> Games </h3>
             <ul>
             <% @games.each do |game| %>
-
+<li class="gameicon"><%#= game.img_icon_url %>Temp</li>
          <li><button type="button" class="btn btn-success btn-xs">Select Game</button> <h5><%= game.game_name %></h5></li>
         <li><%= game.playtime %></li>
-        <li><%= game.img_icon_url %></li>
+
+
 
 
 
