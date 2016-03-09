@@ -1,2 +1,2 @@
-//= jquery
+//= require jquery
 $('.carousel').carousel();
