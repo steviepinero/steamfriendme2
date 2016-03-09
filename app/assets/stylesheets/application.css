@@ -5746,6 +5746,12 @@ button.close {
 
 /* ~~~~~~~~~~~~~~~~~~~~css for index ~~~~~~~~~~~~~~ */
 /* opaque background */
+
+
+.signinoutbutton {
+
+}
+
 .description {
   background-color:rgba(128,128,128,0.5);
   padding-left: 5em;
@@ -5777,42 +5783,78 @@ button.close {
   right: 1em;
 }
 
+
+
 /* recent games */
+.recenttitle {
+  background-color: rgba(204, 204, 204, 0.5);
+  width: 10em;
+  height: 1.5em;
+  padding: .2em;
+  border-radius: .1em;
+}
+
+.findmatch {
+  position: absolute;
+  left: 38em;
+  top: 20em;
+  background-color: #5F87A8;
+  width: 13em;
+  height: 13em;
+  transform: rotate(45deg);
+}
+
+.findbutton {
+
+
+  transform: rotate(-45deg);
+
+}
+
 .recentgames{
   background-color: rgba(12,120,120,0.5);
   padding: 5em;
 }
 
-/* css for stars */
-/* - - - - - RATINGS */
-.rating {
+.usercolumn {
+  background-color: #5F87A8;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 150px;
-  height: 30px;
-  padding: 5px 10px;
-  margin: auto;
-  border-radius: 30px;
-  background: #FFF;
-  display: block;
-  overflow: hidden;
+  height: 15em;
+  width: 15em;
+  left: 3em;
 
-  box-shadow: 0 1px #CCC,
-              0 5px #DDD,
-              0 9px 6px -3px #999;
+}
 
-  unicode-bidi: bidi-override;
-  direction: rtl;
+.usercontent {
+
+
 }
-.rating:not(:checked) > input {
-  display: none;
+
+.gamescolumn {
+  background-color: #5F87A8;
+  position: absolute;
+  right: 3em;
+  top: 13em;
 }
+
+
+
+/* matchpage */
+
+.match {
+  position: absolute;
+  background-color: rgba(12,120,120,0.5);
+  left: 37em;
+  top: 13em;
+  padding: 2em;
+}
+
+
+/* css for stars */
+
 
 /* - - - - - RATE */
-#rate {
+/*#rate {
   top: -65px;
 }
 #rate:not(:checked) > label {
@@ -5839,4 +5881,4 @@ button.close {
 }
 #rate > input:checked ~ label {
   color: rgb(0, 135, 211);
-}
+}*/

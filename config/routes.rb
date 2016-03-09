@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get "games/matchpage" => "games#matchpage"
   resources :games
   resources :users
   get "users/index"
   root 'users#index'
+
+
 
   get 'auth/steam', as: 'steam_login'
   get 'auth/:provide/callback' => 'sessions#create'
