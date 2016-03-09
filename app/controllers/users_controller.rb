@@ -47,7 +47,8 @@ class UsersController < ApplicationController
         @game.game_name = myRecentlyPlayed["games"][i]["name"]
         # Gets entire playtime for game
         @game.playtime = myRecentlyPlayed["games"][i]["playtime_forever"]
-        # Gets image icon url. Must be interpolated to view.
+        # Gets image icon url. Must be interpolated to view. The interpolation will be done in the view
+        # http://media.steampowered.com/steamcommunity/public/images/apps/#{appid:}/#{img_icon_url:}.jpg
         @game.img_icon_url = myRecentlyPlayed["games"][i]["img_icon_url"]
 
         # Checks if user is in game database
