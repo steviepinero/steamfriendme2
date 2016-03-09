@@ -7,11 +7,11 @@
   <body>
         <div class="match"><center>
         <br>  <%= image_tag session[:current_user]["image"] %>
-    <br><%= current_user.nickname %> is your match ! for <%# byebug %>
-      <%# @games.each do |game| %>
-     <%#= game.game_name %>
-    <br> <%#= game.img_icon_url %>
-      <%# end %>
+    <br><%= current_user.nickname %> is your match ! for 
+      <% @games.each do |game| %>
+     <%= game.game_name %>
+    <br> <%= game.img_icon_url %>
+      <% end %>
     <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
 
     </center>
