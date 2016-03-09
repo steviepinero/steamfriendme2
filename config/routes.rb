@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "users/index"
   root 'users#index'
 
+  get "match/matchpage"
+
   get 'auth/steam', as: 'steam_login'
   get 'auth/:provide/callback' => 'sessions#create'
 
