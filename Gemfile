@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# A gem that enables to dump the entire database into a seeds.rb file
+gem 'seed_dump'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
