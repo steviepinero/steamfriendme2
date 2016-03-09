@@ -1,2 +1,2 @@
-
+//= jquery
 $('.carousel').carousel();

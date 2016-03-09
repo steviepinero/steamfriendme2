@@ -2,34 +2,45 @@
 
 
 <div class="recentgames">
-<h1>Choose a game</h1>
+<center><h1 class="recenttitle">Choose a game</h1></center>
 
-<table class="table table-bordered table-hover">
-  <thead>
-
-    <tr>
-      <th class="active">    <%= image_tag session[:current_user]["image"] %>
-             <br><%= current_user.name %>'s Games </th>
-      <th class="active">Appid</th>
-      <th class="active">Playtime</th>
-      <th class="active">Img icon url</th>
-      <th class="active">User</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @games.each do |game| %>
-      <tr>
-        <td class="active"> <button type="button" class="btn btn-success">Find match</button> <%= game.game_name %></td>
-        <td class="active"><%= game.appid %></td>
-        <td class="active"><%= game.playtime %></td>
-        <td class="active"><%= game.img_icon_url %></td>
-        <td class="active"><%= game.user %></td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="findmatch">
+  <div class="findbutton">
+  <button class="btn btn-primary btn-lg"> Find Match </button>
+  </div>
 </div>
+
+  <div class="usercolumn">
+    <div class="usercontent">
+    <center><h3> User </h3>
+   <%= image_tag session[:current_user]["image"] %>
+             <br><%= current_user.name %>'s Games </th>
+               <br><%= current_user.nickname %>
+              <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
+
+             </center>
+    </div>
+
+  </div>
+
+
+
+
+        <div class="gamescolumn">
+          <center><h3> Games </h3>
+            <ul>
+            <% @games.each do |game| %>
+
+         <li><button type="button" class="btn btn-success btn-xs">Select Game</button> <h5><%= game.game_name %></h5></li>
+        <li><%= game.playtime %></li>
+        <li><%= game.img_icon_url %></li>
+
+
+
+    <% end %>
+  </ul>
+  </center>
+
+
+      </div>
+  </div>
