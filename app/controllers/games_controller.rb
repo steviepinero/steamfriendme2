@@ -62,7 +62,7 @@ class GamesController < ApplicationController
   end
 
   def matchpage
-  
+  @games = Game.all
   end
 
   private
