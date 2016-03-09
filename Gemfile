@@ -58,8 +58,11 @@ group :development, :test do
   # rspec-rails is a testing framework for Rails 3.x and 4.x.
   gem 'rspec-rails', '~> 3.0'
   # Shoulda-Matchers provides one-line matchers to RSpec used in testing Rails functionality
-  # Shoulda matchers (shoulda.io) provide a quick set of matchers that we can use to quickly test for certain things in Rails. 
+  # Shoulda matchers (shoulda.io) provide a quick set of matchers that we can use to quickly test for certain things in Rails.
   gem 'shoulda-matchers', '~> 2.8'
+
+  gem 'database_cleaner', '~> 1.5'
+
 end
 
 group :development do
