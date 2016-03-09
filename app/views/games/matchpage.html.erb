@@ -7,10 +7,14 @@
   <body>
         <div class="match"><center>
         <br>  <%= image_tag session[:current_user]["image"] %>
-    <br><%= current_user.nickname %> is your match ! for 
+    <br><%= current_user.nickname %> is your match ! for
       <% @games.each do |game| %>
-     <%= game.game_name %>
-    <br> <%= game.img_icon_url %>
+      <%= game.game_name %><br>
+      <%#= byebug %>
+      <!-- string interpolation idea for image -->
+      <%#= "http://media.steampowered.com/steamcommunity/public/images/apps/#{appid}/#{img_icon_url}.jpg" %>
+
+    <br> <%#= game.img_icon_url %>
       <% end %>
     <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
 
