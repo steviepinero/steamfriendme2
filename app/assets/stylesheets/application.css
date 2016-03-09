@@ -5777,6 +5777,8 @@ button.close {
   right: 1em;
 }
 
+
+
 /* recent games */
 .recentgames{
   background-color: rgba(12,120,120,0.5);
@@ -5784,35 +5786,10 @@ button.close {
 }
 
 /* css for stars */
-/* - - - - - RATINGS */
-.rating {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 150px;
-  height: 30px;
-  padding: 5px 10px;
-  margin: auto;
-  border-radius: 30px;
-  background: #FFF;
-  display: block;
-  overflow: hidden;
 
-  box-shadow: 0 1px #CCC,
-              0 5px #DDD,
-              0 9px 6px -3px #999;
-
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-.rating:not(:checked) > input {
-  display: none;
-}
 
 /* - - - - - RATE */
-#rate {
+/*#rate {
   top: -65px;
 }
 #rate:not(:checked) > label {
@@ -5839,4 +5816,4 @@ button.close {
 }
 #rate > input:checked ~ label {
   color: rgb(0, 135, 211);
-}
+}*/

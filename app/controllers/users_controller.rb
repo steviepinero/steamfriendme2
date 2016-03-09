@@ -63,7 +63,7 @@ class UsersController < ApplicationController
       byebug
 
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Signed in!"
+      redirect_to 'game/find_match', notice: "Signed in!"
     end
 
     # logout
