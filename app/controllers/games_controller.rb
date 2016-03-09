@@ -61,6 +61,10 @@ class GamesController < ApplicationController
     end
   end
 
+  def matchpage
+  
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game
@@ -71,4 +75,6 @@ class GamesController < ApplicationController
     def game_params
       params.require(:game).permit(:game_name, :appid, :playtime, :img_icon_url, :user_id)
     end
+
+
 end
