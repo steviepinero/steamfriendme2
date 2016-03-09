@@ -55,7 +55,10 @@ gem 'figaro'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # rspec-rails is a testing framework for Rails 3.x and 4.x.
   gem 'rspec-rails', '~> 3.0'
+  # Shoulda-Matchers provides one-line matchers to RSpec used in testing Rails functionality
+  # Shoulda matchers (shoulda.io) provide a quick set of matchers that we can use to quickly test for certain things in Rails. 
   gem 'shoulda-matchers', '~> 2.8'
 end
 
