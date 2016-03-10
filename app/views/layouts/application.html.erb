@@ -43,12 +43,13 @@
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form> -->
+
         <ul class="nav navbar-nav navbar-right" id="signinoutbutton">
           <% if current_user %>
           <li><%= link_to "Sign out", logout_path %></li>
             <% else %>
 
-          <li>  <%= link_to "Sign in with Steam", steam_login_path %>
+          <li class="animated infinite pulse">  <%= link_to "Sign in with Steam", steam_login_path %>
           <% end %></li>
 
 

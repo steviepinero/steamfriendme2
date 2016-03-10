@@ -50,6 +50,8 @@ gem "font-awesome-rails"
 
 # gem for managing environment variables (steam webapi key)
 gem 'figaro'
+#gem for pre built css animations from animate.css
+gem "animate-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
