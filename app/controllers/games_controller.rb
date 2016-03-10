@@ -4,7 +4,7 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    @games = Game.where(user_id: session[:user_id])
   end
 
   # GET /games/1
@@ -62,13 +62,25 @@ class GamesController < ApplicationController
   end
 
   def matchpage
-  @games = Game.all
+    # @users = User.games.where(appid: params[:id]
+    # Empty array of @games.
+    @games = []
+    # Iterating through all the user
+    User.all.each do |user|
+      # Moves to next iteration if current user session equals the user uid.
+      next if session[:current_user]['uid'] == user.uid
+      # find_by will return the game if it finds it. If not, returns nil. By appid.
+      game = user.games.find_by(appid: params[:id])
+      # User from current iteration is added alongside the game into games array as a hash.
+      # If game not found, it is nil. It will break the iteration and resume iteration.
+      @games << {user: user, game: game} if game != nil
+    end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game
-      @game = Game.find(params[:id])
+      @game = Game.find_by(appid:params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

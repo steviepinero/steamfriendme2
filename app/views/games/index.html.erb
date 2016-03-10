@@ -33,13 +33,16 @@
             <ul>
             <% @games.each do |game| %>
 
-         <li><button type="button" class="btn btn-success btn-xs">Select Game</button> <h5><%= game.game_name %></h5></li>
+         <li><%= link_to "Match by this game", controller: "games", action: "matchpage", id: game.appid %></li>
+         <li><%= game.game_name %></h5></li>
+
         <li><%= game.playtime %></li>
         <li><%= game.img_icon_url %></li>
 
 
 
     <% end %>
+
   </ul>
   </center>
 
