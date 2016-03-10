@@ -26,30 +26,16 @@ $('.carousel').carousel()
   <div class="description">
     <p>
   <center><h1>SteamFriend.Me</h1>
-<h3>A Gaming Based Social Networking service<h3>
+<h3>A Gaming Based Social Networking Service<h3>
   <img src="http://www.userlogos.org/files/logos/Diamond00744/steam_3.png">
 <h4>Ever buy a game and have no one to play with? <h4>
 </p>
 <p id="greating">
 Steamfriend.me matches users to potential friends, 1-on-1, with people that play similar games using user data drawn directly from Steam. Virtually instantly, within seconds you'll have an active gamer that is down to play the game you want to play. </p>
-  <!-- <p><%#= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %> -->
-
-      <!-- old sign in stuff -->
-    <!-- <div class="userprofile">
-    <%# if session.key? :current_user %>
-    <h4>Current user:</h4>
-    <%#= image_tag session[:current_user]["image"] %>
-    <h5>Steam Nickname:<%#= session[:current_user]["nickname"] %></h5>
-    <h5>Steam RealName:<%#= session[:current_user]["name"] %></h5>
-    <h5>Profileurl:<%#= session[:current_user]["profileurl"] %></h5>
-    <h5>Location:<%#= session[:current_user]["location"] %></h5>
-    <h5><%#= session[:current_user]["profileurl"] %></h5>
-    <h5>Online status: <%#= session[:current_user]["status"] %></h5>
-
-    <%# end %></center> --></center>
+</center>
 
         <div id="avatar">
-    <!-- <em><%#= notice %></em><br> -->
+
     <% if current_user %>
     <%= image_tag session[:current_user]["image"] %>
       <br>Welcome <%= current_user.name %> !<br>
@@ -60,10 +46,3 @@ Steamfriend.me matches users to potential friends, 1-on-1, with people that play
   </div>
 </div>
 </body>
-
-<!-- generates stars for rating, disables after they rate the user -->
-<!-- Rating : <%#= rating_for @rate_user, "satisfaction", :half_show => true, :disable_after_rate => true %> -->
-
-
-<!-- hidden fields in views
-make button that says to make the api call and get the information and automatically populates information. When user saves the information it is saved into activeRecord -->

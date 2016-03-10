@@ -1,13 +1,10 @@
-
-
-
+<body>
 <div class="recentgames">
 <center><h1 class="recenttitle">Choose a game</h1></center>
 
 <div class="findmatch">
   <div class="findbutton">
     <p id="notice"><%= notice %>
-
   </div>
 </div>
 
@@ -18,14 +15,9 @@
              <br><%= current_user.name %> also known as </th>
                <br><%= current_user.nickname %>
               <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
-
              </center>
     </div>
-
   </div>
-
-
-
 
         <div class="gamescolumn">
           <center><h3> Games </h3>
@@ -38,16 +30,9 @@
 
 
         <li><%= game.playtime %></li>
-
-
-
-
-
-    <% end %>
-
-  </ul>
+                        <% end %>
+          </ul>
   </center>
-
-
-      </div>
+        </div>
   </div>
+</body>
