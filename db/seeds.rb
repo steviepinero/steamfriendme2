@@ -38,5 +38,15 @@ Game.create!([
   {game_name: "Prison Architect", appid: "233450", playtime: "573", img_icon_url: "c166c7911beec4d63a74cdddf25f26b73c84556b", user_id: 4},
   {game_name: "XCOM: Enemy Unknown", appid: "200510", playtime: "889", img_icon_url: "48be2fee1d0d511b5c7313e1359beafd36ea92ed", user_id: 5},
   {game_name: "Starbound", appid: "211820", playtime: "3685", img_icon_url: "9420b506fe5b00fd02d9005f1f5555358e3f71f7", user_id: 6},
-  {game_name: "Team Fortress 2", appid: "440", playtime: "3586", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 7}
+  {game_name: "Team Fortress 2", appid: "440", playtime: "3586", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 7},
+  {game_name: "Dota 2", appid: "570", playtime: "434", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 2},
+  {game_name: "Dota 2", appid: "570", playtime: "2345", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 3},
+  {game_name: "Dota 2", appid: "570", playtime: "23", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 4},
+  {game_name: "Dota 2", appid: "570", playtime: "4724", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 5},
+  {game_name: "Dota 2", appid: "570", playtime: "574", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 6},
+  {game_name: "Dota 2", appid: "570", playtime: "572", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 7},
+  {game_name: "Dota 2", appid: "570", playtime: "324", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 8},
+  {game_name: "Dota 2", appid: "570", playtime: "7812", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 9},
+  {game_name: "Dota 2", appid: "570", playtime: "683", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10},
+  {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 11}
   ])
