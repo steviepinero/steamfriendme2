@@ -75,18 +75,26 @@ class GamesController < ApplicationController
       # If game not found, it is nil. It will break the iteration and resume iteration.
       @games << {user: user, game: game} if game != nil
     end
+
+    # if the loop does not have any inputs in the array. It will redirect to index.
+    # And display a notice.
+    if @games.empty?
+      flash[:notice] = "No users found for that game. Try something else."
+      redirect_to games_path
+      return
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_game
-      @game = Game.find_by(appid:params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_game
+    @game = Game.find_by(appid:params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def game_params
-      params.require(:game).permit(:game_name, :appid, :playtime, :img_icon_url, :user_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def game_params
+    params.require(:game).permit(:game_name, :appid, :playtime, :img_icon_url, :user_id)
+  end
 
 
 end
