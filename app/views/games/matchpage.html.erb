@@ -8,11 +8,12 @@
         <div class="match"><center>
         <br>  <%= image_tag session[:current_user]["image"] %>
     <br><%= current_user.nickname %> is your match ! for
-<br>
+    <br>
       <% @games.each do |game_user| %>
      <b>Match Game name:</b><%= game_user[:game].game_name %>
     <br>Match icon url: <%= game_user[:game].img_icon_url %>
     <p>Matched User id:<%= game_user[:user].nickname %></p>
+
       <% end %>
 
     <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>

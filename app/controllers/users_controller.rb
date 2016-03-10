@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       # Gets the total_count value of a player within the recently_played_games hash
       total_count = myRecentlyPlayed['total_count']
 
-      # Iterates through the entire recently played games hash based on total count
+
       total_count.times do |i|
         # Sets instance of a new Game
         @game = Game.new
@@ -61,9 +61,11 @@ class UsersController < ApplicationController
           @game.save # saves data from games
         end
       end
+      byebug
+
 
       session[:user_id] = user.id
-      redirect_to games_path, notice: "Signed in!"
+      redirect_to root_url, notice: "Signed in!"
     end
 
     # logout
