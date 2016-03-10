@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 
 <div class="recentgames">
@@ -6,9 +6,8 @@
 
 <div class="findmatch">
   <div class="findbutton">
-    <%= link_to games_matchpage_path do %>
-  <button class="btn btn-primary btn-lg"> Find Match </button>
-  <% end %>
+    <p id="notice"><%= notice %>
+
   </div>
 </div>
 
@@ -32,15 +31,12 @@
           <center><h3> Games </h3>
             <ul>
             <% @games.each do |game| %>
-<<<<<<< HEAD
-<li class="gameicon"><%#= game.img_icon_url %>Temp</li>
-         <li><button type="button" class="btn btn-success btn-xs">Select Game</button> <h5><%= game.game_name %></h5></li>
-=======
+
 
          <li><%= link_to "Match by this game", controller: "games", action: "matchpage", id: game.appid %></li>
          <li><%= game.game_name %></h5></li>
 
->>>>>>> master
+
         <li><%= game.playtime %></li>
 
 
