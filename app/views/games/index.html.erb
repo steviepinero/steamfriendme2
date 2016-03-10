@@ -1,35 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Games</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Game name</th>
-      <th>Appid</th>
-      <th>Playtime</th>
-      <th>Img icon url</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="recentgames">
+<center><h1 class="recenttitle">Choose a game</h1></center>
 
-  <tbody>
-    <% @games.each do |game| %>
-      <tr>
-        <td><%= game.game_name %></td>
-        <td><%= game.appid %></td>
-        <td><%= game.playtime %></td>
-        <td><%= game.img_icon_url %></td>
-        <td><%= game.user %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="findmatch">
+  <div class="findbutton">
+    <%= link_to games_matchpage_path do %>
+  <button class="btn btn-primary btn-lg"> Find Match </button>
+  <% end %>
+  </div>
+</div>
+
+  <div class="usercolumn">
+    <div class="usercontent">
+    <center><h3> User </h3>
+   <%= image_tag session[:current_user]["image"] %>
+             <br><%= current_user.name %>'s Games </th>
+               <br><%= current_user.nickname %>
+              <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
+
+             </center>
+    </div>
+
+  </div>
+
+
+
+
+        <div class="gamescolumn">
+          <center><h3> Games </h3>
+            <ul>
+            <% @games.each do |game| %>
+
+         <li><%= link_to "Match by this game", controller: "games", action: "matchpage", id: game.appid %></li>
+         <li><%= game.game_name %></h5></li>
+
+        <li><%= game.playtime %></li>
+        <li><%= game.img_icon_url %></li>
+
+
+
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  </ul>
+  </center>
 
-<%= link_to 'New Game', new_game_path %>
+
+      </div>
+  </div>
