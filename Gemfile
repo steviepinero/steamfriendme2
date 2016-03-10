@@ -56,6 +56,16 @@ gem "animate-rails"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # rspec-rails is a testing framework for Rails 3.x and 4.x.
+  gem 'rspec-rails', '~> 3.0'
+  # Shoulda-Matchers provides one-line matchers to RSpec used in testing Rails functionality
+  # Shoulda matchers (shoulda.io) provide a quick set of matchers that we can use to quickly test for certain things in Rails.
+  gem 'shoulda-matchers', '~> 3.0.0.alpha'
+  # Database Cleaner is a set of strategies for cleaning the database between test runs. It helps to ensure a clean state for testing
+  gem 'database_cleaner', '~> 1.5'
+  gem 'capybara'#, '~> 2.5'
+
+
 end
 
 group :development do
