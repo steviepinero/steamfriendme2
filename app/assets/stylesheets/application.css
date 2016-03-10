@@ -5819,7 +5819,7 @@ button.close {
 .usercolumn {
   background-color: #5F87A8;
   position: absolute;
-  height: 30em;
+  height: 40em;
   width: 30em;
   left: 3em;
 
@@ -5834,9 +5834,9 @@ button.close {
   background-color: #5F87A8;
   position: absolute;
   right: 3em;
-  top: 13.9em;
+  top: 13.7em;
   width: 30em;
-  height: 50em;
+  height: 40em;
   list-style: none;
 }
 
