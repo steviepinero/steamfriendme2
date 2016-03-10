@@ -5793,22 +5793,19 @@ button.close {
   height: 1.5em;
   padding: .2em;
   border-radius: .1em;
+  top: 40em;
 }
 
 .findmatch {
   position: absolute;
   left: 38em;
-  top: 20em;
-  background-color: #5F87A8;
+  top: 10em;
+  background-color: red;
   width: 13em;
-  height: 13em;
-  transform: rotate(45deg);
+  height: 3em;
 }
 
 .findbutton {
-
-
-  transform: rotate(-45deg);
 
 }
 
@@ -5820,8 +5817,8 @@ button.close {
 .usercolumn {
   background-color: #5F87A8;
   position: absolute;
-  height: 40em;
-  width: 30em;
+  height: 43em;
+  width: 40em;
   left: 3em;
 
 }
@@ -5836,17 +5833,15 @@ button.close {
   position: absolute;
   right: 3em;
   top: 13.7em;
-  width: 30em;
-  height: 40em;
+  width: 40em;
+  height: 43em;
   list-style: none;
 }
 
 .gameicon {
-  background-color: green;
   position: absolute;
   left: 1em;
-  width: 5em;
-  height: 5em;
+
 }
 
 
