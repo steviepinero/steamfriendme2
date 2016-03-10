@@ -8,6 +8,7 @@
         <div class="match"><center>
         <br>  <%= image_tag session[:current_user]["image"] %>
     <br><%= current_user.nickname %> is your match ! for
+<<<<<<< HEAD
       <% @games.each do |game| %>
       <%= game.game_name %><br>
       <%#= byebug %>
@@ -15,7 +16,15 @@
       <%#= "http://media.steampowered.com/steamcommunity/public/images/apps/#{appid}/#{img_icon_url}.jpg" %>
 
     <br> <%#= game.img_icon_url %>
+=======
+<br>
+      <% @games.each do |game_user| %>
+     <b>Match Game name:</b><%= game_user[:game].game_name %>
+    <br>Match icon url: <%= game_user[:game].img_icon_url %>
+    <p>Matched User id:<%= game_user[:user].nickname %></p>
+>>>>>>> master
       <% end %>
+
     <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
 
     </center>
