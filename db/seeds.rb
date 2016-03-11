@@ -4,7 +4,7 @@ User.create!([
   {nickname: "Stashbuster", name: "Stevie p", rating: nil, user_profile: "http://steamcommunity.com/id/steviethewizard/", user_image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a7/a7249ff5d376a9c98cd9fdce7f1c37eb825634ff_medium.jpg", user_location: "fort Lauderdale, FL, US", uid: "76561198059152531", provider: "steam"},
   {nickname: "Hipster", name: "Joel Markovich", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser1url/", user_image: "https://pbs.twimg.com/profile_images/671309082200924160/Rn1s5YcP.jpg", user_location: "Berlin, Germany", uid: "76561197994786191", provider: "steam"},
   {nickname: "Ace", name: "Vivian Van Helsing", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser2url/", user_image: "http://files.gamebanana.com/img/ico/sprays/gamer.png", user_location: "The Hague, Netherlands", uid: "76561197994786192", provider: "steam"},
-  {nickname: "Fake Nick name 3", name: "Ted Sanchez", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser3url/", user_image: "https://lh3.googleusercontent.com/-D9vsIa3W6P0/AAAAAAAAAAI/AAAAAAAAAAA/e9FwsqB7G8A/photo.jpg", user_location: "Zurich, Switzerland", uid: "76561197994786193", provider: "steam"},
+  {nickname: "The Godfather", name: "Ted Sanchez", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser3url/", user_image: "https://lh3.googleusercontent.com/-D9vsIa3W6P0/AAAAAAAAAAI/AAAAAAAAAAA/e9FwsqB7G8A/photo.jpg", user_location: "Zurich, Switzerland", uid: "76561197994786193", provider: "steam"},
   {nickname: "Gizmo", name: "Gabriel Noboa", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser4url/", user_image: "http://icons.iconarchive.com/icons/afterglow/forum-faces-2/128/Gamer-icon.png", user_location: "Paris, France", uid: "76561197994786194", provider: "steam"},
   {nickname: "Blondie", name: "Johanna Mikkola", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser5url/", user_image: "http://project.jakehelbig.com/GEEK/content/img/system/geek_logo.png", user_location: "Alberta, Canada", uid: "76561197994786195", provider: "steam"},
   {nickname: "Peanut", name: "Juha Mikkola", rating: nil, user_profile: "http://steamcommunity.com/id/fakeuser6url/", user_image: "http://www.iclarified.com/images/news/49358/230570/230570-64.png", user_location: "Helsinki, Finland", uid: "76561197994786196", provider: "steam"},
@@ -50,3 +50,6 @@ Game.create!([
   {game_name: "Dota 2", appid: "570", playtime: "683", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10},
   {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 11}
   ])
+
+  # A list of all Steam's apps. thier names, appids, types
+  # https://steamdb.info/apps/
