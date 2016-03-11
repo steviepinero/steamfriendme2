@@ -5857,35 +5857,41 @@ button.close {
 }
 
 
-/* css for stars */
 
 
-/* - - - - - RATE */
-/*#rate {
-  top: -65px;
-}
-#rate:not(:checked) > label {
-  cursor:pointer;
-  float: right;
-  width: 30px;
-  height: 30px;
-  display: block;
+/* copied css for alert message */
 
-  color: rgba(0, 135, 211, .4);
-  line-height: 33px;
-  text-align: center;
+
+
+.alerts {
+  margin: 20px;
 }
-#rate:not(:checked) > label:hover,
-#rate:not(:checked) > label:hover ~ label {
-  color: rgba(0, 135, 211, .6);
+
+.alerts p {
+  /* quick and dirty hack added by me, you may remove it if not needed */
+  margin: 0; padding: 0;
 }
-#rate > input:checked + label:hover,
-#rate > input:checked + label:hover ~ label,
-#rate > input:checked ~ label:hover,
-#rate > input:checked ~ label:hover ~ label,
-#rate > label:hover ~ input:checked ~ label {
-  color: rgba(0, 135, 211, .8);
+
+.alert-message.danger, .alert-message.danger:hover, .alert-message.error, .alert-message.error:hover, .alert-message.success, alert-message.success:hover, .alert-message.info, .alert-message.info:hover {
+  color: #ffffff;
 }
-#rate > input:checked ~ label {
-  color: rgb(0, 135, 211);
-}*/
+.alert-message .close {
+  font-family: Arial, sans-serif;
+  line-height: 18px;
+}
+.alert-message.danger, .alert-message.error {
+  background-color: rgba(12,120,120,0.5);
+  background-repeat: repeat-x;
+
+  background-image: -khtml-gradient(linear, left top, left bottom, from(rgba(12,120,120,0.5)), to(rgba(12,120,120,0.5)));
+  background-image: -moz-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
+  background-image: -ms-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12,120,120,0.5)), color-stop(100%, rgba(12,120,120,0.5)));
+  background-image: -webkit-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
+  background-image: -o-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
+  background-image: linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(12,120,120,0.5)', endColorstr='rgba(12,120,120,0.5)', GradientType=0);
+
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+}
