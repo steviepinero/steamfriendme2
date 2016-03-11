@@ -31,13 +31,13 @@
 <div class="gamescolumn">
   <center>
     <h3>
-      Games
+     Games
     </h3>
     <ul>
       <% @games.each do |game| %>
 
       <li><%= link_to "Match by this game", controller: "games", action: "matchpage", id: game.appid %></li>
-      <li><%= game.game_name %></h5></li>
+      <li><h5><%= game.game_name %></h5></li>
       <li>Your playing history in this game is <%= game.playtime %> minutes</li>
       <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
       <li class="gameicon"><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/></a></li>
