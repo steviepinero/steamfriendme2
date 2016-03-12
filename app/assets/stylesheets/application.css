@@ -5871,6 +5871,23 @@ button.close {
   padding: 2em;
 }
 
+
+/*Profile page */
+
+
+#profileAvatar {
+  float: left;
+  top: 2em;
+}
+
+
+
+
+
+
+
+
+
 /* copied css for alert message */
 
 
@@ -5880,7 +5897,7 @@ button.close {
 }
 
 .alerts p {
-  /* quick and dirty hack added by me, you may remove it if not needed */
+  /* quick and dirty hack added by internet person, you may remove it if not needed */
   margin: 0; padding: 0;
 }
 

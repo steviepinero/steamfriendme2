@@ -6,7 +6,26 @@
   </head>
   <body>
 
+    <div class="title animated bounceInDown">
+        <p>
 
+          <div class="animated bounceInRight"id="profileAvatar">
+
+
+
+        <% if current_user %>
+          <br><h1>Meet <%= current_user.nickname %> !</h1>
+        <%= image_tag session[:current_user]["image"] %>
+        </div>
+        <br>
+
+        <% end %><center>
+          <%= current_user.nickname %> also owns
+
+    </center>
+
+      </div>
+    </div>
 
 
 
