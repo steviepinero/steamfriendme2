@@ -79,7 +79,7 @@ class GamesController < ApplicationController
     # if the loop does not have any inputs in the array. It will redirect to index.
     # And display a notice.
     if @games.empty?
-      flash[:notice] = "No users found for that game. Try something else."
+      flash[:notice] = "No one plays that game. Try something else."
       redirect_to games_path
       return
     end
