@@ -5,6 +5,9 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.where(user_id: session[:user_id])
+    current_user_id = current_user.id
+    @current_user_rating = UserRating.find_by(user_id:current_user_id).rating
+
   end
 
   # GET /games/1
@@ -87,8 +90,10 @@ class GamesController < ApplicationController
       redirect_to games_path
       return
     end
+
     @matchedUserGames = @chosen_match[:user][:id]
     @DisplayMatchedUserGames = User.find_by(id:@matchedUserGames)
+
 
     @rating = UserRating.new
 
