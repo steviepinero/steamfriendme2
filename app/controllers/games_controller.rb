@@ -92,6 +92,7 @@ class GamesController < ApplicationController
     end
 
     @rating = UserRating.new
+
   end
 
   private
