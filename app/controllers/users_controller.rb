@@ -61,7 +61,7 @@ class UsersController < ApplicationController
           @game.save # saves data from games
         end
       end
-      byebug
+      
 
 
       session[:user_id] = user.id
