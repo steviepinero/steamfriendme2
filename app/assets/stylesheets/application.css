@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require animate
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -5899,6 +5900,7 @@ button.close {
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(12,120,120,0.5)', endColorstr='rgba(12,120,120,0.5)', GradientType=0);
 
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
 
 hr{
