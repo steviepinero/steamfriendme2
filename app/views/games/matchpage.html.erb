@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Found a Match</title>
+
   </head>
   <body>
     <!-- THIN CONTROLLER, FAT MODEL.  THIS CODE SHOULD GO IN THE CONTROLLER, BECOME AN INSTANCE VARIABLE,
@@ -19,11 +20,11 @@
 <!-- here will be displayed the details of the matched user -->
         <h4><%= @chosen_match[:user][:nickname] %></h4>
         <h4><%= @chosen_match[:user][:name] %></h4>
-        <h4><%= link_to @chosen_match[:user][:user_profile], @chosen_match[:user][:user_profile] ,:target => "_blank" %></h4>
-        <h4><%= @chosen_match[:user][:user_location] %></h4>
-        <h4><%= @chosen_match[:user][:user_location] %></h4>
-        <h4><%= @chosen_match[:user][:user_location] %></h4>
-        <h4><%= @chosen_match[:user][:user_location] %></h4>
+        <h4><%= link_to @chosen_match[:user][:user_profile], @chosen_match[:user][:user_profile] ,:target => "_blank", class: 'thelink' %></h4>
+        <!-- user-image should have an assigned size -->
+        <h4 id="user-image"><img src="<%= @chosen_match[:user][:user_image] %>"</h4>
+        <h4><%= @chosen_match[:user][:rating]%></h4>
+        <%=button_tag 'hello'%>
         <h4><%= @chosen_match[:user][:user_location] %></h4>
 
 
@@ -46,5 +47,22 @@
 
       </center>
     </div>
+
+    <script type='text/javascript'>
+    // document.getElementById('button').onclick = function() {
+    //   // window.open("http://www.google.com", '_blank');
+    //   // window.open("http://www.p3php.in", '_blank');
+    //   console.log('yooo')
+    // }
+    $('button').click(function() {
+    // e.preventDefault();
+    window.location = ('http://localhost.3000/');
+    window.open('http://yahoo.com');
+});
+    </script>
+
   </body>
+
+
+
 </html>
