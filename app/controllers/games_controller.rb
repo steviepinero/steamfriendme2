@@ -88,7 +88,7 @@ class GamesController < ApplicationController
       return
     end
     @rating = UserRating.new
-    byebug
+
   end
 
   private
