@@ -2,7 +2,7 @@
 <body>
 
   <center>
-    <h1 class="recenttitle">Choose a game</h1>
+    <h1 class="recenttitle animated slideInDown">Choose a game</h1>
   </center>
 
 
@@ -16,7 +16,7 @@
 
 
 <div class="row" style="margin: 10px 75px;">
-        <div class="usercolumn-n col-lg-6" style="border: 1px black solid; float:left; width:45%; height: 250px;">
+        <div class="usercolumn-n col-lg-6 animated slideInLeft" style="border: 1px black solid; float:left; width:45%; height: 250px;">
           <div class="usercontent" style="">
             <center><h3> Welcome  <%= current_user.nickname %>! </h3>
               <%= image_tag session[:current_user]["image"] %>
@@ -29,7 +29,7 @@
 
 
 
-        <div class="gamescolumn-n col-lg-6" style="border: 1px black solid; float: right; width: 45%; height: 250px; ">
+        <div class="gamescolumn-n col-lg-6 animated slideInRight" style="border: 1px black solid; float: right; width: 45%; height: 250px; ">
             <h3 style="text-align: center">
               Choose a Game
             </h3>
