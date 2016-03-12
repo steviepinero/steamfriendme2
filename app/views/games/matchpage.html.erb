@@ -9,6 +9,8 @@
     <!-- THIN CONTROLLER, FAT MODEL.  THIS CODE SHOULD GO IN THE CONTROLLER, BECOME AN INSTANCE VARIABLE,
  GET DISPLAYED IN THIS VIEW, AFTERWARDS IT SHOULD BE REFACTORED TO A GAMES HELPER METHOD OR BE IN THE GAMES MODEL.
   IT SHOULD NOT BE IN THE VIEW  -->
+
+    <div class="matchContainer">
     <div class="match">
       <center>
         <br>
@@ -16,8 +18,13 @@
         <h3>Games array length(number of players):<%= @games.length %>(in case we want to use this information)</h3>
         <!-- .sample will randomly choose a user from the @game array -->
         <!-- An opponent is being choosed randomly, we need to display it propely commenting of the bottom lines
+
          made the rest of the users to not appear -->
 
+<%= current_user.nickname %> also owns
+          <h4> game</h4><br>
+          <h4> game</h4><br>
+          <h4> game</h4>
         <h4><%#= @games.sample %></h4>
         <%# byebug %>
 
@@ -49,6 +56,7 @@
 
       </center>
     </div>
+  </div
   </body>
 
 
