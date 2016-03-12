@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312010714) do
+ActiveRecord::Schema.define(version: 20160312200952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160312010714) do
 
   add_index "games", ["user_id"], name: "index_games_on_user_id", using: :btree
 
-  create_table "ratings", force: :cascade do |t|
+  create_table "user_ratings", force: :cascade do |t|
     t.integer  "rating"
     t.integer  "rating_user_id"
     t.integer  "user_id"
@@ -36,12 +36,11 @@ ActiveRecord::Schema.define(version: 20160312010714) do
     t.datetime "updated_at",     null: false
   end
 
-  add_index "ratings", ["user_id"], name: "index_ratings_on_user_id", using: :btree
+  add_index "user_ratings", ["user_id"], name: "index_user_ratings_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string "nickname"
     t.string "name"
-    t.string "rating"
     t.string "user_profile"
     t.string "user_image"
     t.string "user_location"
@@ -50,5 +49,5 @@ ActiveRecord::Schema.define(version: 20160312010714) do
   end
 
   add_foreign_key "games", "users"
-  add_foreign_key "ratings", "users"
+  add_foreign_key "user_ratings", "users"
 end

@@ -1,15 +1,15 @@
 class RatingsController < ApplicationController
   # GET /ratings/new
   def new
-    @rating = rating.new
+    @rating = UserRating.new
   end
 
   def create
-    @rating = Rating.new(rating_params)
+    @rating = UserRating.new(rating_params)
 
     respond_to do |format|
       if @rating.save
-        format.html { redirect_to @rating, notice: 'rating was successfully created.' }
+        format.html { redirect_to root_path, notice: 'rating was successfully created.' }
         format.json { render :show, status: :created, location: @rating }
       else
         format.html { render :new }
@@ -30,9 +30,16 @@ class RatingsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def rating_params
-    params.require(:rating).permit(:rating, :user_id, :rating_user_id)
+    params.require(:post).permit(:rating, :user_id, :rating_user_id)
   end
 
-  #Define rating + and -
+  # #Define rating + and -
+  # def upvote_count
+  #   :rating += 1
+  # end
+  #
+  # def downvote_count
+  #   :rating -= 1
+  # end
 
 end
