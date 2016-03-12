@@ -19,12 +19,13 @@
 
 
 <h3>Meet <%= @chosen_match[:user][:nickname] %></h3> <%= @chosen_match[:user][:nickname] %> also owns
-          <br><h4> game</h4><br>
+          <div class="gameList">
+      <br><h4> game</h4><br>
           <h4> game</h4><br>
           <h4> game</h4><br>
         <h4><%#= @games.sample %></h4>
         <%# byebug %>
-
+      </div>
           <!-- display matched user details-->
         <h4><%= @chosen_match[:user][:nickname] %></h4>
         <h4><%= @chosen_match[:user][:name] %>'s Profile</h4>
