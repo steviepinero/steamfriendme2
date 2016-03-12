@@ -24,7 +24,6 @@
         <!-- user-image should have an assigned size -->
         <h4 id="user-image"><img src="<%= @chosen_match[:user][:user_image] %>"</h4>
         <h4><%= @chosen_match[:user][:rating]%></h4>
-        <%=button_tag 'hello'%>
         <h4><%= @chosen_match[:user][:user_location] %></h4>
 
 
@@ -47,19 +46,6 @@
 
       </center>
     </div>
-
-    <script type='text/javascript'>
-    // document.getElementById('button').onclick = function() {
-    //   // window.open("http://www.google.com", '_blank');
-    //   // window.open("http://www.p3php.in", '_blank');
-    //   console.log('yooo')
-    // }
-    $('button').click(function() {
-    // e.preventDefault();
-    window.location = ('http://localhost.3000/');
-    window.open('http://yahoo.com');
-});
-    </script>
 
   </body>
 
