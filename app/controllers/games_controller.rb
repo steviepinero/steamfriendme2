@@ -74,12 +74,16 @@ class GamesController < ApplicationController
       # User from current iteration is added alongside the game into games array as a hash.
       # If game not found, it is nil. It will break the iteration and resume iteration.
       @games << {user: user, game: game} if game != nil
+      # @chosen_match = @games.sample means that the randomly selected match will be assigned as '@chosen_match' and from
+      # it all of the details of the match will be displayed
+      @chosen_match = @games.sample
+
     end
 
     # if the loop does not have any inputs in the array. It will redirect to index.
     # And display a notice.
     if @games.empty?
-      flash[:notice] = "No users found for that game. Try something else."
+      flash[:notice] = "No one plays that game. Try something else."
       redirect_to games_path
       return
     end

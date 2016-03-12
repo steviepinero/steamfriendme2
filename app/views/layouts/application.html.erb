@@ -23,8 +23,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Find Match", games_path %></li>
+        <% unless session[:user_id].nil? %>
+        <li><%= link_to "Find Match", games_path %></li>
+
+            <% end %>
           <li class="dropdown">
+
             <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
@@ -52,7 +56,7 @@
           <li class="animated infinite pulse">  <%= link_to "Sign in with Steam", steam_login_path %>
           <% end %></li>
 
-
+          
           <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -73,6 +77,28 @@
   <!-- <%= link_to image_tag("http://www.cxnteam.com/images/misc/steam_login.png"), '/auth/steam' %> -->
 
 <%= yield %>
+
+<!-- faq pop over -->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>
