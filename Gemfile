@@ -37,9 +37,6 @@ gem 'rails-erd'
 # use Steam OpenID Omniauth gem for authenticating Steam users
 gem 'omniauth-steam', :github => 'reu/omniauth-steam'
 
-
-
-
 gem 'steam-api'
 
 gem 'bootstrap-sass', '~> 3.3.6'

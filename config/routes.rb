@@ -26,10 +26,13 @@ Rails.application.routes.draw do
   # get 'ratings/rate_user'
   # get 'user/rate'
 
-  # get 'ratings/your_rating'
-  #
-  #
-  # get 'user/rate'
+  post 'games/matchpage' => 'ratings#create', as:'rating_create'
+
+  get 'ratings/your_rating'
+
+
+  get 'user/rate'
+
   post 'auth/steam/callback' => 'users#auth_callback'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

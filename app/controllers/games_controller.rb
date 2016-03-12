@@ -87,6 +87,8 @@ class GamesController < ApplicationController
       redirect_to games_path
       return
     end
+    @rating = UserRating.new
+    byebug
   end
 
   private
