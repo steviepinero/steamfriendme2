@@ -88,7 +88,7 @@ class GamesController < ApplicationController
       return
     end
     @matchedUserGames = @chosen_match[:user][:id]
-    @DisplayMatchedUserGames = User.find_by(id:@matchedUserGames).games
+    @DisplayMatchedUserGames = User.find_by(id:@matchedUserGames)
 
     @rating = UserRating.new
 

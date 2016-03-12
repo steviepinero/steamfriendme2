@@ -20,9 +20,9 @@
 
 <h3>Meet <%= @chosen_match[:user][:nickname] %></h3> <%= @chosen_match[:user][:nickname] %> also owns
           <div class="gameList">
-      <br><h4> game</h4><br>
-          <h4> game</h4><br>
-          <h4> game</h4><br>
+            <% @DisplayMatchedUserGames.games.map do |n| %>
+            <h3><%= n.game_name %></h3>
+              <% end %>
         <h4><%#= @games.sample %></h4>
         <%# byebug %>
       </div>
@@ -37,7 +37,7 @@
         <h4><%= @chosen_match[:user][:rating]%></h4>
         <h4><%= @chosen_match[:user][:user_location] %></h4>
         <h4><%= @chosen_match[:user][:games] %></h4>
-            <%= @DisplayMatchedUserGames %>
+
 
 
 
