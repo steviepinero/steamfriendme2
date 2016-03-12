@@ -21,8 +21,12 @@
             <center><h3> Welcome  <%= current_user.nickname %>! </h3>
               <%= image_tag session[:current_user]["image"] %>
               <br><%= current_user.name %> also known as </th>
+              <br>
               <br><%= current_user.nickname %>
+              <br>
               <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
+              <br>
+              <p>Rating:</p>
             </center>
           </div>
         </div>

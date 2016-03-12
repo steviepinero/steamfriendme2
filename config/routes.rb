@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   # get 'ratings/rate_user'
   # get 'user/rate'
 
+  post 'games/matchpage' => 'ratings#create', as:'rating_create'
+
   get 'ratings/your_rating'
 
 

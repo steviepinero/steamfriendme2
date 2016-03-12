@@ -1,0 +1,38 @@
+class RatingsController < ApplicationController
+  # GET /ratings/new
+  def new
+    @rating = rating.new
+  end
+
+  def create
+    @rating = Rating.new(rating_params)
+
+    respond_to do |format|
+      if @rating.save
+        format.html { redirect_to @rating, notice: 'rating was successfully created.' }
+        format.json { render :show, status: :created, location: @rating }
+      else
+        format.html { render :new }
+        format.json { render json: @rating.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /ratings/1
+  # DELETE /ratings/1.json
+  def destroy
+    @rating.destroy
+    respond_to do |format|
+      format.html { redirect_to ratings_url, notice: 'rating was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def rating_params
+    params.require(:rating).permit(:rating, :user_id, :rating_user_id)
+  end
+
+  #Define rating + and -
+
+end
