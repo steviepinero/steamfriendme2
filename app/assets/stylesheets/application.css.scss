@@ -5810,6 +5810,10 @@ button.close {
 
 .recentgames{
   background-color: rgba(12,120,120,0.5);
+<<<<<<< HEAD:app/assets/stylesheets/application.css.scss
+=======
+  height: 300em;
+>>>>>>> 4a7ed3487a613dc4545eec9b5526ef8fea931a78:app/assets/stylesheets/application.css
   margin: 10px;
 
 }
@@ -5838,11 +5842,11 @@ button.close {
 }
 
 .gamescolumn-n{
-
+    background-color: rgba(128,128,128,0.5);
 }
 
 .gameicon {
-  position: absolute;
+
   left: 1em;
   padding-left: 12em;
 }
@@ -5862,11 +5866,22 @@ button.close {
 /* matchpage */
 
 .match {
-  position: absolute;
+  position: fixed;;
   background-color: rgba(12,120,120,0.5);
-  left: 37em;
-  top: 13em;
-  padding: 2em;
+  left: auto;
+  padding-left: 18em;
+  padding-top: 5em;
+  padding-right: 18em;
+  padding-bottom: 5em;
+}
+
+
+/*Profile page */
+
+
+#profileAvatar {
+  float: left;
+  top: 2em;
 }
 
 /* copied css for alert message */
@@ -5874,7 +5889,7 @@ button.close {
   margin: 20px;
 }
 .alerts p {
-  /* quick and dirty hack added by me, you may remove it if not needed */
+  /* quick and dirty hack added by internet person, you may remove it if not needed */
   margin: 0; padding: 0;
 }
 

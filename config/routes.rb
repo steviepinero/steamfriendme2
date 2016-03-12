@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "games/matchpage" => "games#matchpage"
+  get "games/profile"   => "games#profile"
   resources :games
   resources :users
   get "users/index"
@@ -18,15 +19,17 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
+
+
   # We don't have any ratings yet - steve
   # post '/rate' => 'rater#create', :as => 'rate'
   # get 'ratings/rate_user'
   # get 'user/rate'
 
-  get 'ratings/your_rating'
-
-
-  get 'user/rate'
+  # get 'ratings/your_rating'
+  #
+  #
+  # get 'user/rate'
   post 'auth/steam/callback' => 'users#auth_callback'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
