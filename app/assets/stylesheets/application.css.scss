@@ -5862,35 +5862,28 @@ button.close {
 /* matchpage */
 
 .match {
-  position: fixed;
+  position: absolute;
   background-color: rgba(12,120,120,0.5);
-  padding-left: 18em;
+  // padding-left: 18em;
   padding-top: 5em;
-  padding-right: 18em;
+  // padding-right: 18em;
   padding-bottom: 5em;
-  border-style: solid;
+  border-style: dashed;
   border-color: black;
-  width: 17em;
-  height: inherit;
+  width: 29em;
+  height: 60em;
   margin-left: 25em;
-}
-
-.matchContainer{
-  box-sizing: border-box;
-  width: 17em;
-  border-style: solid;
-  border: 5em;
-  border-color: black;
+  margin-right: 25em;
+  text-align: center;
 }
 
 
-/*Profile page */
-
-
-#profileAvatar {
+#user-image {
   float: left;
-  top: 2em;
+  left: 2em;
 }
+
+
 
 /* copied css for alert message */
 .alerts {
