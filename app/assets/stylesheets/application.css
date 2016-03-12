@@ -5811,7 +5811,7 @@ button.close {
 
 .recentgames{
   background-color: rgba(12,120,120,0.5);
-  padding:;
+  height: 300em;
   margin: 10px;
 
 }
@@ -5840,11 +5840,11 @@ button.close {
 }
 
 .gamescolumn-n{
-
+    background-color: rgba(128,128,128,0.5);
 }
 
 .gameicon {
-  position: absolute;
+
   left: 1em;
   padding-left: 12em;
 }
@@ -5870,10 +5870,6 @@ button.close {
   top: 13em;
   padding: 2em;
 }
-
-<<<<<<< HEAD
-
-
 
 /* copied css for alert message */
 
