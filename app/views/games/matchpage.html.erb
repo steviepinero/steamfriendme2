@@ -31,9 +31,15 @@
         <h4><%= @chosen_match[:user][:name] %>'s Profile</h4>
         <h4><%= link_to @chosen_match[:user][:user_profile], @chosen_match[:user][:user_profile] ,:target => "_blank", class: 'thelink' %></h4>
 
+        <!-- user-image should have an assigned size -->
+        <h4 id="user-image"><img src="<%= @chosen_match[:user][:user_image] %>"</h4>
+        <h4>User id:<%= @chosen_match[:user][:id] %></h4>
         <h4><%= @chosen_match[:user][:rating]%></h4>
         <h4><%= @chosen_match[:user][:user_location] %></h4>
         <h4><%= @chosen_match[:user][:games] %></h4>
+
+
+
 
         <%# @games.each do |game_user| %>
         <!-- <br><%#= game_user[:user].nickname %> -->
@@ -51,6 +57,13 @@
 
         <!-- Dont we want to show the match's profile rather than the user? -->
         <!-- <a href="<%#= session[:current_user][" profileurl"] %>"><%#= chosen_opponent[:nickname] %>'s Profile</a> -->
+
+        <a href="<%= session[:current_user][" profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
+        <%= render :partial => "ratings/form" %>
+
+
+      </center>
+    </div>
 
 
 

@@ -21,40 +21,47 @@
             <center><h3> Welcome  <%= current_user.nickname %>! </h3>
               <%= image_tag session[:current_user]["image"] %>
               <br><%= current_user.name %> also known as </th>
+              <br>
               <br><%= current_user.nickname %>
+              <br>
               <br><a href="<%= session[:current_user]["profileurl"] %>"><%= current_user.nickname %>'s Profile</a>
+              <br>
+              <p>Rating:</p>
             </center>
           </div>
         </div>
 
 
 
-        <div class="gamescolumn-n col-lg-6 animated slideInRight" style="border: 1px black solid; float: right; width: 45%; height: 250px; ">
+        <div class="gamescolumn-n col-lg-6 animated slideInRight" style="border: 1px black solid; float: right; width: 45%; height: auto; ">
             <h3 style="text-align: center">
               Choose a Game
             </h3>
             <div class="row">
 
-              <% @games.each do |game| %>
 
-                
-                <div class="col-lg-2 gameicon" style="margin-top:20px;">
-                  <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
-                </div>
-                <div class="col-lg-10">
-                  <h4 style="text-align:center"><%= game.game_name %></h4>
+            <% @games.each do |game| %>
 
-                  <p style="text-align:center">Your play time is  <%= game.playtime.to_i/60 %> hours</p>
-                  <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
 
-                <center><%= link_to "Find people playing #{game.game_name}",{controller: "games", action: "matchpage", id: game.appid}, class: "btn btn-default" %></center>
-                  <hr>
-                </div>
-                <% end %>
+            <div class="col-lg-2" style="margin-top:20px;">
+              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
             </div>
+            <div class="col-lg-10">
+              <h4 style="text-align:center"><%= game.game_name %></h4>
+              <hr>
+              <p style="text-align:center">Your gametime for this game is <%= game.playtime.to_i/60 %> hours</p>
+              <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
+
+              <%= link_to "Find people playing #{game.game_name}",{controller: "games", action: "matchpage", id: game.appid}, class: "btn-default btn-lg" %>
+
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
 
 
       </div>
 </div>
 
-</body>
+    </body>

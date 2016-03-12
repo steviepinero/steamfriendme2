@@ -1,0 +1,17 @@
+<%= form_for(@rating, :as => :post, :url => rating_create_path(@rating)) do |f| %>
+ <div class="field">
+
+ </div>
+   <%= f.hidden_field :user_id, :value => current_user.id %>
+   <%= f.hidden_field :rating_user_id, :value => @chosen_match[:user][:id] %>
+ <div class="field">
+   <%= f.radio_button(:rating,  1) %>
+   <%= f.label(:rating, "Friendly") %>
+   <%= f.radio_button(:rating, -1) %>
+   <%= f.label(:rating, "Not Friendly") %>
+ </div>
+
+ <div class="actions">
+   <%= f.submit %>
+ </div>
+<% end %>
