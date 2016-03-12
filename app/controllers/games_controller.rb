@@ -87,6 +87,9 @@ class GamesController < ApplicationController
       redirect_to games_path
       return
     end
+    @matchedUserGames = @chosen_match[:user][:id]
+    @DisplayMatchedUserGames = User.find_by(id:@matchedUserGames).games
+
     @rating = UserRating.new
 
   end
