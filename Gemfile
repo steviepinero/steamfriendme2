@@ -75,3 +75,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# Added as an attempt to solve isuues with running the app in Heroku
+group :production, :staging do
+  config.serve_static_assets = true
+  config.assets.compile = true
+end
