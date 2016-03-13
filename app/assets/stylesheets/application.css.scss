@@ -5786,6 +5786,16 @@ button.close {
 
 
 /* recent games */
+
+.findgamebody {
+  background: url(http://i.imgur.com/vYYNTru.png) no-repeat center center fixed;
+  background-color: rgba(128,128,128,0.5);
+  // -webkit-filter: blur(5px);
+  // -moz-filter: blur(5px);
+  // -o-filter: blur(5px);
+  // -ms-filter: blur(5px);
+  // filter: blur(5px);
+}
 .recenttitle {
   background-color: rgba(204, 204, 204, 0.5);
   width: 10em;
@@ -5809,14 +5819,14 @@ button.close {
 }
 
 .recentgames{
-  background-color: rgba(12,120,120,0.5);
+  
   height: auto;
   padding: 20px 5%;
 }
 
-.usercolumn {
-  background-color: #5F87A8;
-  position: absolute;
+.usercolumn-n {
+  background-color: rgba(128,128,128,0.5);
+  position: fixed;
   height: 43em;
   width: 40em;
   left: 3em;
@@ -5861,6 +5871,10 @@ button.close {
 
 /* matchpage */
 
+.matchPageBody {
+  background: url(http://3.bp.blogspot.com/-kDf5IC0kNqY/UVxfmlrqf3I/AAAAAAAAABI/PD8Lzz5uxCI/s1600/Intel.png) no-repeat center center fixed;
+}
+
 .match {
   position: absolute;
   background-color: rgba(204, 204, 204, 0.5);
@@ -5882,69 +5896,4 @@ button.close {
 #user-image {
   float: left;
   left: 2em;
-}
-
-
-
-/* copied css for alert message */
-.alerts {
-  margin: 20px;
-}
-.alerts p {
-  /* quick and dirty hack added by internet person, you may remove it if not needed */
-  margin: 0; padding: 0;
-}
-
-.alert-message.danger, .alert-message.danger:hover, .alert-message.error, .alert-message.error:hover, .alert-message.success, alert-message.success:hover, .alert-message.info, .alert-message.info:hover {
-  color: #ffffff;
-}
-.alert-message .close {
-  font-family: Arial, sans-serif;
-  line-height: 18px;
-}
-.alert-message.danger, .alert-message.error {
-  background-color: rgba(12,120,120,0.5);
-  background-repeat: repeat-x;
-
-  background-image: -khtml-gradient(linear, left top, left bottom, from(rgba(12,120,120,0.5)), to(rgba(12,120,120,0.5)));
-  background-image: -moz-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
-  background-image: -ms-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12,120,120,0.5)), color-stop(100%, rgba(12,120,120,0.5)));
-  background-image: -webkit-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
-  background-image: -o-linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
-  background-image: linear-gradient(top, rgba(12,120,120,0.5), rgba(12,120,120,0.5));
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(12,120,120,0.5)', endColorstr='rgba(12,120,120,0.5)', GradientType=0);
-
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-
-hr{
-  margin:0;
-}
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button5 {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-}
-
-.button5:hover {
-    background-color: #555555;
-    color: white;
-
 }
