@@ -5,10 +5,21 @@
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :rating_user_id, :value => @chosen_match[:user][:id] %>
  <div class="field">
-   <%= f.radio_button(:rating,  1) %>
-   <%= f.label(:rating, "Friendly") %>
-   <%= f.radio_button(:rating, -1) %>
-   <%= f.label(:rating, "Not Friendly") %>
+<ul id="ratings">
+   <li>
+     <label for="post-rating_1">
+       <%= f.radio_button(:rating, 1) %>
+       <%= image_tag "thumb_up.ico", class: 'thumb' %>
+   </li>
+   <li>
+     </label>
+     <label for="post-rating_-1">
+       <%= f.radio_button(:rating, -1) %>
+       <%= image_tag "thumb_down.png", class: 'thumb' %>
+     </label>
+   </li>
+ </ul>
+
  </div>
 
  <div class="actions">
