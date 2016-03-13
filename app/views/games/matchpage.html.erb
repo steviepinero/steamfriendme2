@@ -27,10 +27,12 @@
         <%# byebug %>
       </div>
           <!-- display matched user details-->
-        <h4><%= @chosen_match[:user][:nickname] %></h4>
-        <h4><%= @chosen_match[:user][:name] %>'s Profile</h4>
-        <h4><%= link_to @chosen_match[:user][:user_profile], @chosen_match[:user][:user_profile] ,:target => "_blank", class: 'thelink' %></h4>
-
+        <!-- <h4><%= @chosen_match[:user][:nickname] %></h4> -->
+        <!-- <h4><%= @chosen_match[:user][:nickname] %>'s Profile</h4> -->
+        <%#= link_to  title:"@chosen_match[:user][:nickname]'s Profile", @chosen_match[:user][:user_profile] ,:target => "_blank", class: 'thelink' %>
+          <%= link_to @chosen_match[:user][:user_profile], :target => "_blank", class: 'thelink' do %>
+          <h4><%= @chosen_match[:user][:nickname] %>'s Profile</h4>
+            <% end %>
         <!-- user-image should have an assigned size -->
 
         <h4>User id:<%= @chosen_match[:user][:id] %></h4>

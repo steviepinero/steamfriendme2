@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   def index
     @games = Game.where(user_id: session[:user_id])
     current_user_id = current_user.id
-    @current_user_rating = UserRating.find_by(user_id:current_user_id).rating
+    # @current_user_rating = UserRating.find_by(user_id:current_user_id).rating
 
   end
 
