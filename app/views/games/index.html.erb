@@ -18,14 +18,16 @@
             <span><%= image_tag session[:current_user]["image"] %></span>
         </div>
         <div class="col-lg-9" style="padding-right:0">
-            <br><p>You are currently also known as...</p>
+            <br><p>Your current nickname is </p>
             <h2 style="text-align:center"><%= current_user.nickname %></h2>
             <div class="button-wrapper" style="text-align: center; margin: 20px">
-              <%= link_to "Your Profile", session[:current_user]["profileurl"], class: "btn-default btn-sm" %>
+              <%= link_to "Your Profile", session[:current_user]["profileurl"], class: "ghost-button" %>
             </div>
-            <h4 style="display:inline">Your rating: <p style="display:inline"><%= @current_user_rating %></p></h4>
 
-              <p>Your Recent Games:</p>
+            <h4 style="display:inline">Your rating: <h4 class="rating"><%= @current_user_rating %></4></h4>
+
+
+              <p>Your recently played games: </p>
               <div class="recent-games-sidebyside" style="text-align:center" >
               <% @games.each do |game| %>
                 <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
@@ -42,9 +44,9 @@
 
 
         <div class="gamescolumn-n col-lg-6 animated slideInRight" style="float: right; width: 45%; height: auto; padding: 0 5%; ">
-          <h3 style="text-align: center">
+          <h1 style="text-align: center">
             Choose a Game
-          </h3>
+          </h1>
           <div class="row">
 
 
@@ -55,11 +57,11 @@
                   <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
                 </div>
                 <div class="col-lg-8" style="margin-bottom:10px; ">
-                  <h4 style=""><%= game.game_name %></h4>
+                  <h3 style=""><%= game.game_name %></h3>
                   <p style="">Your play time is <%= game.playtime.to_i/60 %> hours</p>
                   <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
                   <div class="button-wrapper" style="">
-                    <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "btn-default btn-sm", style: "width: 200px;" %>
+                    <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "ghost-button", style: "width: 200px;" %>
                   </div>
                 </div>
             </div>
