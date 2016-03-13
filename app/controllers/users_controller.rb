@@ -19,11 +19,11 @@ class UsersController < ApplicationController
       #stevie method of getting recent games in terminal
       #myRecentlyPlayed = Steam::Player.recently_played_games(myId, params: {})
 
+
       # This creates a new user if searching by provider and uid don't work.
       user =
         User.find_by(provider:auth['provider'], uid: auth['uid']) ||
         User.create_with_omniauth(auth)
-
 
       # sends api key through config/intializers
       Steam.apikey = ENV['STEAM_WEB_API_KEY']
@@ -61,11 +61,13 @@ class UsersController < ApplicationController
           @game.save # saves data from games
         end
       end
-      
 
 
+      byebug
+      this_user_id = User.last.id
+      UserRating.create(user_id:this_user_id)
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Signed in!"
+      redirect_to root_url, notice: "Account created and Signed in!"
     end
 
     # logout

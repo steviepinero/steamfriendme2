@@ -3,8 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .field .stars input{
   // display: none;
+  margin:0;padding:0;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
 }
 
+.visa
+  {background-image:"./images/thumb_up.ico"
+  }
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
 #stars input[type="radio"]{
   display: none;
 }

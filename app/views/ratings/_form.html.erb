@@ -4,10 +4,10 @@
  </div>
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :rating_user_id, :value => @chosen_match[:user][:id] %>
- <div class="field" id="stars">
+ <div class="field stars">
    <label for="post-rating_1">
      <%= f.radio_button(:rating, 1) %>
-     <img src="/images/thumb_up.ico">
+     <img src="./images/thumb_up.ico">
    </label>
    <label for="post-rating_-1">
      <%= f.radio_button(:rating, -1) %>
