@@ -44,8 +44,8 @@ Game.create!([
   {game_name: "Dota 2", appid: "570", playtime: "572", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 7},
   {game_name: "Dota 2", appid: "570", playtime: "324", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 8},
   {game_name: "Dota 2", appid: "570", playtime: "7812", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 9},
-  {game_name: "Dota 2", appid: "570", playtime: "683", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10},
-  {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 11}
+  {game_name: "Dota 2", appid: "570", playtime: "683", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 7},
+  {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 6}
   ])
 
 
