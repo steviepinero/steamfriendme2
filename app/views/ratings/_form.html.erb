@@ -4,7 +4,7 @@
  </div>
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :rating_user_id, :value => @chosen_match[:user][:id] %>
- <div class="field">
+ <div class="field stars">
    <%= f.radio_button(:rating, 1) %>
    <%= f.label(:rating, "put something") %>
    <%= f.radio_button(:rating, 2) %>

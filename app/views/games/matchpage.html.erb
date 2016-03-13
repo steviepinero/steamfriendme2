@@ -18,7 +18,10 @@
         <h4 class="animated slideInLeft"id="user-image"><img src="<%= @chosen_match[:user][:user_image] %>"</h4>
 
 
-<h3>Meet <%= @chosen_match[:user][:nickname] %></h3> <%= @chosen_match[:user][:nickname] %> also owns
+<h3>Meet <%= @chosen_match[:user][:nickname] %></h3>
+<h4>from <%= @chosen_match[:user][:user_location] %></h4>
+
+<%= @chosen_match[:user][:nickname] %> also owns
           <div class="gameList">
             <% @DisplayMatchedUserGames.games.map do |n| %>
             <h3><%= n.game_name %></h3>
@@ -35,12 +38,11 @@
             <% end %>
         <!-- user-image should have an assigned size -->
 
-        <h4>User id:<%= @chosen_match[:user][:id] %></h4>
+        <!-- <h4>User id:<%= @chosen_match[:user][:id] %></h4> -->
         <h4><%= @chosen_match[:user][:rating]%></h4>
-        <h4><%= @chosen_match[:user][:user_location] %></h4>
         <!-- This line displays the HASH of the matched user -->
         <!-- <h4><%= @chosen_match %></h4> -->
-        <% byebug %>
+        <!-- <% byebug %> -->
 
 
 
