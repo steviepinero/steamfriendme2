@@ -7,11 +7,11 @@
  <div class="field stars">
    <label for="post-rating_1">
      <%= f.radio_button(:rating, 1) %>
-     <img src="./images/thumb_up.ico">
+     <%= image_tag "thumb_up.ico" %>
    </label>
    <label for="post-rating_-1">
      <%= f.radio_button(:rating, -1) %>
-     <img src="./app/assets/images/thumb_down.png">
+     <%= image_tag "thumb_down.png" %>
    </label>
 
  </div>
