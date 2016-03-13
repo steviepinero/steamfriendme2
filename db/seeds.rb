@@ -16,6 +16,13 @@ User.create!([
 
 Game.create!([
   {game_name: "Shakes and Fidget", appid: "438040", playtime: "68", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 1},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "58", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 8},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "345", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 2},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "23", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 3},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "993", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 4},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "6352", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 5},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "24", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 6},
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "1", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 7},
   {game_name: "Dota 2", appid: "570", playtime: "33", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 1},
   {game_name: "Rocket League", appid: "252950", playtime: "7997", img_icon_url: "217214f6bd922a8da8bdd684aa94b1ef8e7724d1", user_id: 2},
   {game_name: "Team Fortress 2", appid: "440", playtime: "372356", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 2},
@@ -27,7 +34,6 @@ Game.create!([
   {game_name: "XCOM: Enemy Unknown", appid: "200510", playtime: "724", img_icon_url: "48be2fee1d0d511b5c7313e1359beafd36ea92ed", user_id: 3},
   {game_name: "Starbound", appid: "211820", playtime: "1671", img_icon_url: "9420b506fe5b00fd02d9005f1f5555358e3f71f7", user_id: 3},
   {game_name: "Team Fortress 2", appid: "440", playtime: "372356", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 3},
-  {game_name: "Shakes and Fidget", appid: "438040", playtime: "58", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 8},
   {game_name: "Dota 2", appid: "570", playtime: "324", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 4},
   {game_name: "Rocket League", appid: "252950", playtime: "658", img_icon_url: "217214f6bd922a8da8bdd684aa94b1ef8e7724d1", user_id: 5},
   {game_name: "Team Fortress 2", appid: "440", playtime: "74789", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 6},
