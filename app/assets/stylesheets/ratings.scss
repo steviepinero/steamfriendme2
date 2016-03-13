@@ -1,18 +1,25 @@
 // Place all the styles related to the ratings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.field .stars input{
-  // display: none;
-  margin:0;padding:0;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
+// .field .stars input{
+//   // display: none;
+//   margin:0;padding:0;
+//   -webkit-appearance:none;
+//   -moz-appearance:none;
+//   appearance:none;
+// }
+
+#ratings{
+    display: inline-flex;
+    list-style: none;
 }
 
-.visa
-  {background-image:"./images/thumb_up.ico"
-  }
-.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+.thumb{
+    height: 15%;
+    width: 15%;
+    display: inline;
+}
+
 #stars input[type="radio"]{
   display: none;
 }
