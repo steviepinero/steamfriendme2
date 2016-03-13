@@ -18,8 +18,8 @@
             <span><%= image_tag session[:current_user]["image"] %></span>
         </div>
         <div class="col-lg-9" style="padding-right:0">
-            <br><p>Your current nickname is </p>
-            <h2 style="text-align:center"><%= current_user.nickname %></h2>
+            <!-- <br><p>Your current nickname is </p> -->
+            <!-- <h2 style="text-align:center"><%= current_user.nickname %></h2> -->
             <div class="button-wrapper" style="text-align: center; margin: 20px">
               <%= link_to "Your Profile", session[:current_user]["profileurl"], class: "ghost-button" %>
             </div>
@@ -33,7 +33,12 @@
                 <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
 
               <% end %>
-
+              <p>
+                <%= link_to "Add funds to your Steam account", "http://store.steampowered.com/steamaccount/addfunds" %>
+              </p>
+              <p>
+              <%= link_to "Steam chat", "https://steamcommunity.com//chat/" %>
+              </p>
 
             </div>
         </div>
