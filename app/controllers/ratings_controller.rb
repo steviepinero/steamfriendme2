@@ -9,7 +9,7 @@ class RatingsController < ApplicationController
 
     respond_to do |format|
       if @rating.save
-        format.html { redirect_to root_path, notice: 'rating was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Thank you for rating' }
         format.json { render :show, status: :created, location: @rating }
       else
         format.html { render :new }
