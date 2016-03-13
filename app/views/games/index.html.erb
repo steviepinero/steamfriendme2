@@ -1,24 +1,18 @@
 
-<body>
-
+<body class="findgamebody">
   <center>
     <h1 class="recenttitle animated slideInDown">Choose a game</h1>
+    <center><h2 class="animated bounce"><%= notice %></h2></center>
   </center>
 
 
 
   <div class="recentgames">
 
-
-    <div class="alert-message error">
-      <center><p class="animated bounce"><%= notice %></p></center>
-    </div>
-
-
     <div class="column-container" style="margin: 20px 75px;">
-      <div class="usercolumn-n col-lg-6 animated slideInLeft" style="border: 1px black solid; float:left; width:45%; height: auto;">
+      <div class="usercolumn-n col-lg-6 animated slideInLeft" style=" float:left; width:45%; height: auto;">
         <div class="row usercontent" style="padding-bottom: 10px">
-        <h1 style="text-align:center;">&nbsp;&nbsp;&nbsp;Welcome <%= current_user.nickname %>! </h1>
+        <h1 style="text-align:center;">&nbsp;&nbsp;&nbsp;Welcome <%= current_user.name %>! </h1>
 
         <div class="col-lg-3" style="text-align:center; top: 25px">
             <span><%= image_tag session[:current_user]["image"] %></span>
@@ -47,7 +41,7 @@
 
 
 
-        <div class="gamescolumn-n col-lg-6 animated slideInRight" style="border: 1px black solid; float: right; width: 45%; height: auto; padding: 0 5%; ">
+        <div class="gamescolumn-n col-lg-6 animated slideInRight" style="float: right; width: 45%; height: auto; padding: 0 5%; ">
           <h3 style="text-align: center">
             Choose a Game
           </h3>
@@ -65,7 +59,7 @@
                   <p style="">Your play time is <%= game.playtime.to_i/60 %> hours</p>
                   <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
                   <div class="button-wrapper" style="">
-                    <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "btn-default btn-sm", style: "width: 200px;" %>                  
+                    <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "btn-default btn-sm", style: "width: 200px;" %>
                   </div>
                 </div>
             </div>
