@@ -38,10 +38,15 @@ Game.create!([
   {game_name: "Dota 2", appid: "570", playtime: "572", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 7},
   {game_name: "Dota 2", appid: "570", playtime: "324", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 8},
   {game_name: "Dota 2", appid: "570", playtime: "7812", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 9},
+  {game_name: "Dota 2", appid: "570", playtime: "683", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 7},
+  {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 6}
   {game_name: "Dota 2", appid: "570", playtime: "683", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10},
   {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10},
-  {game_name: "Shakes and Fidget", appid: "438040", playtime: "68", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 11}
+  {game_name: "Shakes and Fidget", appid: "438040", playtime: "68", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 11},
+  {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10}
+
 ])
+
 User.create!([
   {nickname: "Hipster", name: "Joel Markovich", user_profile: "https://steamcommunity.com/profiles/76561198093441460", user_image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a5/a5de09de521e17693d66623ef3102ba197a2db0a_medium.jpg", user_location: "Berlin, Germany", uid: "76561197994786191", provider: "steam"},
   {nickname: "Ace", name: "Vivian Van Helsing", user_profile: "http://steamcommunity.com/id/fakeuser2url/", user_image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a5/a5de09de521e17693d66623ef3102ba197a2db0a_medium.jpg", user_location: "The Hague, Netherlands", uid: "76561197994786192", provider: "steam"},
@@ -61,3 +66,8 @@ UserRating.create!([
   {rating: 0, rating_user_id: nil, user_id: 11},
   {rating: 0, rating_user_id: 8, user_id: 11}
 ])
+
+
+
+  # A list of all Steam's apps. thier names, appids, types
+  # https://steamdb.info/apps/

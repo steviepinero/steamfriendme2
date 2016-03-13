@@ -7,13 +7,13 @@
  <div class="field">
 <ul id="ratings">
    <li>
-     <label for="post-rating_1">
+     <label id="good" for="post-rating_1">
        <%= f.radio_button(:rating, 1) %>
        <%= image_tag "thumb_up.ico", class: 'thumb' %>
    </li>
    <li>
      </label>
-     <label for="post-rating_-1">
+     <label id="bad" for="post-rating_-1">
        <%= f.radio_button(:rating, -1) %>
        <%= image_tag "thumb_down.png", class: 'thumb' %>
      </label>
