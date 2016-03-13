@@ -21,7 +21,7 @@
 <h3>Meet <%= @chosen_match[:user][:nickname] %></h3> <%= @chosen_match[:user][:nickname] %> also owns
           <div class="gameList">
             <% @DisplayMatchedUserGames.games.map do |n| %>
-            <h3><%= n.game_name %></h3>
+            <h5><%= n.game_name %></h5>
               <% end %>
         <h4><%#= @games.sample %></h4>
         <%# byebug %>
