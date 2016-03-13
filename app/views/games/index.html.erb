@@ -65,7 +65,7 @@
                   <p style="">Your play time is <%= game.playtime.to_i/60 %> hours</p>
                   <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
                   <div class="button-wrapper" style="">
-                    <%= link_to "Find  players",{controller: "games", action: "matchpage", id: game.appid}, class: "btn-default btn-sm" %>
+                    <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "btn-default btn-sm", style: "width: 200px;" %>                  
                   </div>
                 </div>
             </div>
