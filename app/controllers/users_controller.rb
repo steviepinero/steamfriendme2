@@ -63,7 +63,7 @@ class UsersController < ApplicationController
       end
 
 
-      byebug
+      
       this_user_id = User.last.id
       UserRating.create(user_id:this_user_id)
       session[:user_id] = user.id
