@@ -6,10 +6,7 @@
 
 </head>
 <body class="matchPageBody">
-  <!-- THIN CONTROLLER, FAT MODEL.  THIS CODE SHOULD GO IN THE CONTROLLER, BECOME AN INSTANCE VARIABLE,
-  GET DISPLAYED IN THIS VIEW, AFTERWARDS IT SHOULD BE REFACTORED TO A GAMES HELPER METHOD OR BE IN THE GAMES MODEL.
 
-  IT SHOULD NOT BE IN THE VIEW  -->
 
 
   <div class="match animated slideInDown">
@@ -27,7 +24,7 @@
 
           <% @DisplayMatchedUserGames.games.map do |n| %>
 
-          <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= n.appid %>/<%= n.img_icon_url %>.jpg")/ style=""></a>
+          <a><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= n.appid %>/<%= n.img_icon_url %>.jpg ")/ ></a>
 
           <% end %>
           <% @DisplayMatchedUserGames.games.map do |n| %>
@@ -44,11 +41,9 @@
 <h4>from <%= @chosen_match[:user][:user_location] %></h4>
 
 <%= @chosen_match[:user][:nickname] %>
-    
+
           <!-- display matched user details-->
-        <!-- <h4><%= @chosen_match[:user][:nickname] %></h4> -->
-        <!-- <h4><%= @chosen_match[:user][:nickname] %>'s Profile</h4> -->
-        <%#= link_to  title:"@chosen_match[:user][:nickname]'s Profile", @chosen_match[:user][:user_profile] ,:target => "_blank", class: 'thelink' %>
+
           <%= link_to @chosen_match[:user][:user_profile], :target => "_blank", class: 'thelink' do %>
           <h4><%= @chosen_match[:user][:nickname] %>'s Profile</h4>
 
@@ -56,40 +51,11 @@
             <%= render :partial => "ratings/form" %>
 
         <!-- user-image should have an assigned size -->
-
-        <!-- <h4>User id:<%= @chosen_match[:user][:id] %></h4> -->
         <h4><%= @chosen_match[:user][:rating]%></h4>
-        <!-- This line displays the HASH of the matched user -->
-        <!-- <h4><%= @chosen_match %></h4> -->
-        <%# byebug %>
-
 
         <h4><%= @chosen_match[:user][:games] %></h4>
       </div>
-
-
-
-
-      <%# @games.each do |game_user| %>
-      <!-- <br><%#= game_user[:user].nickname %> -->
-      <!-- is your match ! -->
-      <!-- <br> -->
-      <!-- <b>Match Game name: -->
-      <!-- </b><%#= game_user[:game].game_name %> -->
-      <!-- <br>Match icon url: -->
-      <%#= game_user[:game].img_icon_url %>
-      <!-- <p>Matched User id: -->
-      <!-- <%#= game_user[:user].nickname %></p> -->
-      <%# end %>
-
       <br>
-
-      <!-- Dont we want to show the match's profile rather than the user? -->
-      <!-- <a href="<%#= session[:current_user][" profileurl"] %>"><%#= chosen_opponent[:nickname] %>'s Profile</a> -->
-
-
-
-
     </center>
   </div>
 </div>
