@@ -5790,8 +5790,8 @@ body {
 #avatar {
 
   position: absolute;
-  top:5em;
-  right: 1em;
+  top:3em;
+  right:3em;
 }
 
 
@@ -5993,10 +5993,14 @@ body {
   margin-bottom: 100px;
 }
 .game-header{
+  color:white;
 }
 h1{
   color:white;
 }
 .match-profile-button{
   margin: 5px;
+}
+.playtime{
+  font-weight:700;
 }
