@@ -6,17 +6,17 @@
    <%= f.hidden_field :rating_user_id, :value => @chosen_match[:user][:id] %>
  <div class="field">
 <ul id="ratings">
+  <li>
+    </label>
+    <label id="bad" for="post-rating_-1">
+      <%= f.radio_button(:rating, -1) %>
+      <span class="glyphicon glyphicon-thumbs-down"></span>
+    </label>
+  </li>
    <li>
      <label id="good" for="post-rating_1">
        <%= f.radio_button(:rating, 1) %>
        <span class="glyphicon glyphicon-thumbs-up"><%#=  class: 'thumb' %></span>
-   </li>
-   <li>
-     </label>
-     <label id="bad" for="post-rating_-1">
-       <%= f.radio_button(:rating, -1) %>
-       <span class="glyphicon glyphicon-thumbs-down"></span>
-     </label>
    </li>
  </ul>
 
