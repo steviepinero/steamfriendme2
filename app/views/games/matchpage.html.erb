@@ -48,12 +48,10 @@
 ​          <h4 class="no-margin-top" style="text-align:center"><strong>They've also recently played: </strong></h4>
           <% @DisplayMatchedUserGames.games.map do |n| %>
 ​
-          <a><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= n.appid %>/<%= n.img_icon_url %>.jpg ")/ style="width:50px; height:50px;" ></a>
+          <a href="http://store.steampowered.com/app/<%= n.appid %>"><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= n.appid %>/<%= n.img_icon_url %>.jpg ")/ style="width:50px; height:50px;" ></a>
 ​
           <% end %>
-          <% @DisplayMatchedUserGames.games.map do |n| %>
-          <h5><%= n.game_name %></h5>
-            <% end %>
+
 ​
           <h4><%#= @games.sample %></h4>
           <%# byebug %>
