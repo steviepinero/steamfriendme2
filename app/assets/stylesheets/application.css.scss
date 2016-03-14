@@ -5951,7 +5951,7 @@ body {
  color:white;
  margin: 0 auto;
  width: 50%;
- margin-top: 100px;
+ margin-top: 25px;
  text-align:center;
  padding: 0 50px;
  background-color: rgba(128,128,128,0.5);
@@ -5959,7 +5959,6 @@ body {
 }
 
 .gameList {
-margin-top:10px;
 
 }
 
@@ -5970,9 +5969,7 @@ margin-top:10px;
 .alignt-left{
   text-align:left
 }
-#user-image {
-  float: left;
-  left: 2em;
+.user-image {
 }
 .user-side{
   text-align:center;
@@ -5996,6 +5993,11 @@ margin-top:10px;
 .content-wrapper{
   margin-bottom: 100px;
 }
+.game-header{
+}
 h1{
-
+  color:white;
+}
+.match-profile-button{
+  margin: 5px;
 }
