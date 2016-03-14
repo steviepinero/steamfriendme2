@@ -12,12 +12,7 @@ User.create!([
   {nickname: "Bam Bam", name: "johnny knoxville", user_profile: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a5/a5de09de521e17693d66623ef3102ba197a2db0a_medium.jpg", user_image: "https://31.media.tumblr.com/avatar_4d9526d2abb3_128.png", user_location: "New York, NY, US", uid: "765611979947861910", provider: "steam"},
   {nickname: "Pookie", name: "Renan", user_profile: "http://steamcommunity.com/id/the_real_renan/", user_image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/29/2945bd0cc98343ea493cdc67b2f46ad6ba1af3f0_medium.jpg", user_location: "896, FL, US", uid: "76561198287309916", provider: "steam"}
 ])
-UserRating.create!([
-  {rating: 0, rating_user_id: nil, user_id: 11},
-  {rating: 0, rating_user_id: 1, user_id: 11},
-  {rating: 0, rating_user_id: nil, user_id: 11},
-  {rating: 0, rating_user_id: 8, user_id: 11}
-])
+
 
 Game.create!([
   {game_name: "Shakes and Fidget", appid: "438040", playtime: "68", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 1},
