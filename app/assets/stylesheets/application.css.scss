@@ -5802,6 +5802,7 @@ body {
   outline: none;
   text-decoration: none;
   color: #fff;
+  background-color: rgba(0,0,0,0.0);
 }
 
 
@@ -5864,7 +5865,7 @@ body {
   padding-top: 0;
 }
 
-.usercolumn-n {
+.usercolumn {
   background-color: rgba(128,128,128,0.5);
   position: fixed;
   height: 43em;
@@ -5887,7 +5888,7 @@ body {
   list-style: none;
 }
 
-.gamescolumn-n{
+.gamescolumn{
     background-color: rgba(128,128,128,0.5);
 }
 
