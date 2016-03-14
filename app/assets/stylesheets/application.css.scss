@@ -5790,8 +5790,8 @@ body {
 #avatar {
 
   position: absolute;
-  top:5em;
-  right: 1em;
+  top:3em;
+  right:3em;
 }
 
 
@@ -5923,6 +5923,7 @@ body {
 
 .glyphicon{
   padding-left: .3em;
+  padding-right: 1em;
   font-size: 3.2em;
 }
 
@@ -5998,10 +5999,14 @@ body {
   margin-bottom: 100px;
 }
 .game-header{
+  color:white;
 }
 h1{
   color:white;
 }
 .match-profile-button{
   margin: 5px;
+}
+.playtime{
+  font-weight:700;
 }
