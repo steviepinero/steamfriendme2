@@ -5713,25 +5713,28 @@ button.close {
     }
 }
 .item:nth-child(1) {
-    background: url(http://i.imgur.com/AvGHIhx.jpg) no-repeat center center fixed;
+    background: url(http://i.imgur.com/AvGHIhx.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    top: 3em;
 }
 .item:nth-child(2) {
-    background: url(http://i.imgur.com/PjNAtVV.jpg) no-repeat center center fixed;
+    background: url(http://i.imgur.com/PjNAtVV.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    top: 3em;
 }
 .item:nth-child(3) {
-    background: url(http://i.imgur.com/eWD1YCX.jpg) no-repeat center center fixed;
+    background: url(http://i.imgur.com/eWD1YCX.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    top: 3em;
 }
 .carousel {
     z-index: -99;
@@ -5927,6 +5930,14 @@ body {
 
 .glyphicon-thumbs-up:hover{
   color: green;
+}
+
+.clicked-thumbs-up {
+  color: green;
+}
+
+.clicked-thumbs-down {
+  color: red;
 }
 
 .left-column {
