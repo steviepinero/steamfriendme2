@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Found a Match</title>
-
+​
 </head>
 
 <script>
@@ -17,31 +17,31 @@
 });
 </script>
 <body class="matchPageBody">
-
-
-
+​
+​
+​
   <div class="match animated slideInDown">
-
+​
     <br>
-
+​
     <h1 style="text-align:center">Meet <%= @chosen_match[:user][:nickname] %>!</h1>
-
+​
     <div class="row">
       <div class="col-lg-5" style="text-align:center; padding: 0 75px;">
         <h4 class="animated slideInLeft"id="user-image"><img src="<%= @chosen_match[:user][:user_image] %>"</h4>
-
-
+​
+​
         <div class="gameList">
-
+​
           <% @DisplayMatchedUserGames.games.map do |n| %>
-
+​
           <a><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= n.appid %>/<%= n.img_icon_url %>.jpg ")/ ></a>
-
+​
           <% end %>
           <% @DisplayMatchedUserGames.games.map do |n| %>
           <h5><%= n.game_name %></h5>
             <% end %>
-
+​
           <h4><%#= @games.sample %></h4>
           <%# byebug %>
         </div>
@@ -50,34 +50,34 @@
         <!-- display matched user details-->
 <h3><%= @chosen_match[:user][:name] %></h3>
 <h4>from <%= @chosen_match[:user][:user_location] %></h4>
-
-
+​
+​
 <%= @chosen_match[:user][:nickname] %>
-
-
+​
+​
           <!-- display matched user details-->
-
+​
           <%= link_to @chosen_match[:user][:user_profile], :target => "_blank", class: 'thelink' do %>
           <h4><%= @chosen_match[:user][:nickname] %>'s Profile</h4>
-
+​
             <% end %>
             <%= render :partial => "ratings/form" %>
-
+​
         <!-- user-image should have an assigned size -->
         <h4><%= @chosen_match[:user][:rating]%></h4>
-
+​
         <h4><%= @chosen_match[:user][:games] %></h4>
-
+​
       </div>
       <br>
     </center>
   </div>
 </div>
-
-
+​
+​
 </div>
 </body>
-
-
-
+​
+​
+​
 </html>

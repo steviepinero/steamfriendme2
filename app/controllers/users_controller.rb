@@ -67,7 +67,7 @@ class UsersController < ApplicationController
       this_user_id = User.last.id
       UserRating.create(user_id:this_user_id)
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Account created and Signed in!"
+      redirect_to games_path, notice: "Account successfully Signed in!"
     end
 
     # logout
