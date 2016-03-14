@@ -5901,26 +5901,29 @@ body {
 .matchPageBody {
   background: url(http://3.bp.blogspot.com/-kDf5IC0kNqY/UVxfmlrqf3I/AAAAAAAAABI/PD8Lzz5uxCI/s1600/Intel.png) no-repeat center center fixed;
 }
+.match-new{
+  color:white; margin: 0 auto; border: 2px black solid; width: 50%; margin-top: 100px; text-align:center; padding: 0 50px;
+}
 
+.left-column {
+  text-align:center; padding: 0 75px;
+}
 .match {
-  position: absolute;
-  background-color: rgba(204, 204, 204, 0.5);
-  // padding-left: 18em;
-  padding-top: 2em;
-  // padding-right: 18em;
-  padding-bottom: 5em;
-  width: 29em;
-  height: 55em;
-  margin-left: 32em;
-  margin-right: 25em;
-  text-align: center;
+color:white; margin: 0 auto; border: 2px black solid; width: 50%; margin-top: 100px; text-align:center; padding: 0 50px;
 }
 
 .gameList {
-
+margin-top:10px;
 }
 
+.alignt-left{
+  text-align:left
+}
 #user-image {
   float: left;
   left: 2em;
+}
+.user-side{
+  text-align:center;
+  padding: 0 75px;
 }
