@@ -75,11 +75,11 @@ Game.create!([
   {game_name: "Dota 2", appid: "570", playtime: "1484", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 10},
 
   {game_name: "Shakes and Fidget", appid: "438040", playtime: "68", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 11},  {game_name: "Shakes and Fidget", appid: "438040", playtime: "68", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 1},
-    {game_name: "Dota 2", appid: "570", playtime: "33", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 11},
-    {game_name: "Shakes and Fidget", appid: "438040", playtime: "345", img_icon_url: "060712054f7cb6cb68ca721543d811fa9e1dd099", user_id: 11},
-    {game_name: "Team Fortress 2", appid: "440", playtime: "372356", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 11},
-    {game_name: "Rocket League", appid: "252950", playtime: "7997", img_icon_url: "217214f6bd922a8da8bdd684aa94b1ef8e7724d1", user_id: 11},
-    {game_name: "The Binding of Isaac", appid: "113200", playtime: "713", img_icon_url: "383cf045ca20625db18f68ef5e95169012118b9e", user_id: 11}
+  {game_name: "Dota 2", appid: "570", playtime: "33", img_icon_url: "0bbb630d63262dd66d2fdd0f7d37e8661a410075", user_id: 11},
+  {game_name: "Sid Meier's Civilization V", appid: "8930", playtime: "8664", img_icon_url: "fbe80c4743e226f0bf65559c91b12953d4446808", user_id: 11},
+  {game_name: "Team Fortress 2", appid: "440", playtime: "372356", img_icon_url: "e3f595a92552da3d664ad00277fad2107345f743", user_id: 11},
+  {game_name: "Rocket League", appid: "252950", playtime: "7997", img_icon_url: "217214f6bd922a8da8bdd684aa94b1ef8e7724d1", user_id: 11},
+  {game_name: "The Binding of Isaac", appid: "113200", playtime: "713", img_icon_url: "383cf045ca20625db18f68ef5e95169012118b9e", user_id: 11}
 ])
 UserRating.create!([
   {rating: 0, rating_user_id: nil, user_id: 11},
