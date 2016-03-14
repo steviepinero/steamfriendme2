@@ -34,16 +34,18 @@
             <span><img src="<%= @chosen_match[:user][:user_image] %>"</span>
         </div>
           <div class="col-lg-12">
-        ​    <h3 style="margin-top:0"><%= @chosen_match[:user][:name] %></h3>
+        ​    <h3 class="" style="margin-top:0"><%= @chosen_match[:user][:name] %></h3>
             <h4>from <%= @chosen_match[:user][:user_location] %></h4>
           </div>
-​           <%= link_to @chosen_match[:user][:user_profile], :target => "_blank", class: 'thelink ghost-button' do %>
-              <%= @chosen_match[:user][:nickname] %>'s Profile
-​
-           <% end %>
+          <div class="button-wrapper match-profile-button">
+  ​           <%= link_to @chosen_match[:user][:user_profile], :target => "_blank", class: 'thelink ghost-button' do %>
+                Add <%= @chosen_match[:user][:nickname] %>'s Profile
+  ​
+             <% end %>
+          </div>
 
         <div class="gameList">
-​
+​          <h4 class="no-margin-top" style="text-align:center"><strong>They've also recently played: </strong></h4>
           <% @DisplayMatchedUserGames.games.map do |n| %>
 ​
           <a><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= n.appid %>/<%= n.img_icon_url %>.jpg ")/ style="width:50px; height:50px;" ></a>
