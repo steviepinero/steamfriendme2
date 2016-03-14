@@ -5824,7 +5824,6 @@ body {
 
 .rating {
   color: rgb(255,215,0);
-  display: inline;
 }
 
 
@@ -5845,6 +5844,7 @@ body {
   padding: .2em;
   border-radius: .1em;
   top: 40em;
+  border: 1px solid black;
 }
 
 .findmatch {
@@ -5876,8 +5876,8 @@ body {
 }
 
 .usercontent {
-
-border: 0.0625em solid black;
+    padding: 0 5%;
+    border: 0.0625em solid black;
 }
 
 .gamescolumn {
@@ -5888,6 +5888,10 @@ border: 0.0625em solid black;
   height: 43em;
   list-style: none;
   border: 0.0625em solid black;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
 }
 
 .gamescolumn{
@@ -5933,10 +5937,12 @@ border: 0.0625em solid black;
 .match {
  color:white;
  margin: 0 auto;
- width: 50%; margin-top:
- 100px; text-align:center;
+ width: 50%;
+ margin-top: 100px;
+ text-align:center;
  padding: 0 50px;
  background-color: rgba(128,128,128,0.5);
+ border: 1px solid black;
 }
 
 .gameList {
@@ -5962,4 +5968,21 @@ margin-top:10px;
 
 .img-position{
   margin-top:50px;
+}
+.button-wrapper{
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+.no-margin-bottom{
+  margin-bottom: 0;
+}
+.no-margin-top{
+  margin-top: 0;
+}
+.content-wrapper{
+  margin-bottom: 100px;
+}
+h1{
+
 }
