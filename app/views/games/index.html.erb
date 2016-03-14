@@ -61,8 +61,8 @@
                   <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
                 </div>
                 <div class="col-lg-8" style="margin-bottom:10px; ">
-                  <h3 class="game-header"><%= game.game_name %></h3>
-                  <p style="">Your play time is <%= game.playtime.to_i/60 %> hours</p>
+                  <h2 class="game-header"><%= game.game_name %></h3>
+                  <p class="playtime"><%= game.playtime.to_i/60 %> hours in this game</p>
                   <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
                   <div class="button-wrapper" style="">
                     <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "ghost-button", style: "width: 200px;" %>
