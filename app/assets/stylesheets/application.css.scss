@@ -5876,7 +5876,7 @@ body {
 
 .usercontent {
 
-
+border: 0.0625em solid black;
 }
 
 .gamescolumn {
@@ -5886,6 +5886,7 @@ body {
   width: 40em;
   height: 43em;
   list-style: none;
+  border: 0.0625em solid black;
 }
 
 .gamescolumn{
@@ -5911,10 +5912,17 @@ body {
 }
 
 .left-column {
-  text-align:center; padding: 0 75px;
+
+  text-align:center;
+  padding: 0 75px;
 }
 .match {
-color:white; margin: 0 auto; border: 2px black solid; width: 50%; margin-top: 100px; text-align:center; padding: 0 50px;
+ color:white;
+ margin: 0 auto;
+ width: 50%; margin-top:
+ 100px; text-align:center;
+ padding: 0 50px;
+ background-color: rgba(128,128,128,0.5);
 }
 
 .gameList {
