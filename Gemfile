@@ -52,6 +52,9 @@ gem "animate-rails"
 # gem for google fonts
 gem 'google-webfonts-rails'
 
+#gem for icons
+gem 'bootstrap-glyphicons'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
