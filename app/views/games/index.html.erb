@@ -1,7 +1,7 @@
 <body class="findgamebody">
   <center>
     <h1 class="recenttitle animated slideInDown">Choose a game</h1>
-    <center><h2 class="animated bounce"><%= notice %></h2></center>
+    <center><h2 class="notice animated bounce"><%= notice %></h2></center>
   </center>
 ​
 ​
@@ -11,14 +11,19 @@
     <div class="column-container" style="margin: 20px 75px;">
       <div class="usercolumn-n col-lg-6 animated slideInLeft" style=" float:left; width:45%; height: auto;">
         <div class="row usercontent" style="padding-bottom: 10px">
+<<<<<<< HEAD
         <h1 style="text-align:center;">&nbsp;&nbsp;&nbsp;Welcome <%= current_user.name %>! </h1>
 ​
+=======
+        <h1 style="text-align:center;">&nbsp;&nbsp;&nbsp;Welcome <%= current_user.nickname %>! </h1>
+
+>>>>>>> 913b35546c9c56f4549df22fa725a044bcb60345
         <div class="col-lg-3" style="text-align:center; top: 25px">
             <span><%= image_tag session[:current_user]["image"] %></span>
         </div>
         <div class="col-lg-9" style="padding-right:0">
-            <br><p>Your current nickname is </p>
-            <h2 style="text-align:center"><%= current_user.nickname %></h2>
+            <!-- <br><p>Your current nickname is </p> -->
+            <!-- <h2 style="text-align:center"><%= current_user.nickname %></h2> -->
             <div class="button-wrapper" style="text-align: center; margin: 20px">
               <%= link_to "Your Profile", session[:current_user]["profileurl"], class: "ghost-button" %>
             </div>
@@ -32,8 +37,19 @@
                 <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
 ​
               <% end %>
-​
-​
+
+              <p>
+                <%= link_to "Add funds to your Steam account", "http://store.steampowered.com/steamaccount/addfunds" %>
+              </p>
+              <p>
+              <%= link_to "Steam chat", "https://steamcommunity.com//chat/" %>
+              </p>
+                <p>
+                    <%= link_to "Steam Community", "http://steamcommunity.com/" %>
+                </p>
+                <p>
+                  <%= link_to "Steam Support", "https://help.steampowered.com/" %>
+                </p>
             </div>
         </div>
 ​

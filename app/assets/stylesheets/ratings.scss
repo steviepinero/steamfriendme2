@@ -8,16 +8,30 @@
 //   -moz-appearance:none;
 //   appearance:none;
 // }
+#good:hover{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+        transform-fill-mode: forwards;
+}
+
+#bad:hover{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
 
 #ratings{
-    display: inline-flex;
-    list-style: none;
+  display: inline-flex;
+  list-style: none;
 }
 
 .thumb{
-    height: 15%;
-    width: 15%;
-    display: inline;
+  height: 20%;
+  width: 20%;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #stars input[type="radio"]{
