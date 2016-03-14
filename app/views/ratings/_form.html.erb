@@ -1,5 +1,5 @@
 <%= form_for(@rating, :as => :post, :url => rating_create_path(@rating)) do |f| %>
- <h3>Rate this user:</h3>
+ <h3>Rate this user</h3>
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :rating_user_id, :value => @chosen_match[:user][:id] %>
  <div class="field">
