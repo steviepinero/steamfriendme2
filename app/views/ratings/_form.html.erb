@@ -9,13 +9,13 @@
    <li>
      <label id="good" for="post-rating_1">
        <%= f.radio_button(:rating, 1) %>
-       <%= image_tag "thumb_up.ico", class: 'thumb' %>
+       <span class="glyphicon glyphicon-thumbs-up"><%#=  class: 'thumb' %></span>
    </li>
    <li>
      </label>
      <label id="bad" for="post-rating_-1">
        <%= f.radio_button(:rating, -1) %>
-       <%= image_tag "thumb_down.png", class: 'thumb' %>
+       <span class="glyphicon glyphicon-thumbs-down"></span>
      </label>
    </li>
  </ul>
