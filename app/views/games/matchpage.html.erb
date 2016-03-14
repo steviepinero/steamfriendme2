@@ -37,10 +37,12 @@
       </div>
       <div class="col-lg-7" style="text-align:left">
         <!-- display matched user details-->
-<h3>Meet <%= @chosen_match[:user][:nickname] %></h3>
+<h3>Name: <%= @chosen_match[:user][:name] %></h3>
 <h4>from <%= @chosen_match[:user][:user_location] %></h4>
 
+
 <%= @chosen_match[:user][:nickname] %>
+
 
           <!-- display matched user details-->
 
@@ -54,6 +56,11 @@
         <h4><%= @chosen_match[:user][:rating]%></h4>
 
         <h4><%= @chosen_match[:user][:games] %></h4>
+
+        <p>
+          <%= link_to "Explore Steam Discovery", "http://store.steampowered.com/explore/" %>
+        </p>
+
       </div>
       <br>
     </center>
