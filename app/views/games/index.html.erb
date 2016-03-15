@@ -1,0 +1,84 @@
+<body class="findgamebody">
+  <center>
+    <h1 class="recenttitle animated slideInDown" style="">Find Match</h1>
+    <center><h2 class="notice animated bounce"><%= notice %></h2></center>
+  </center>
+​
+​
+​
+  <div class="recentgames">
+
+
+    <div class="column-container">
+      <div class="usercolumn col-lg-6 animated slideInLeft" style=" float:left; width:45%; height: auto;">
+        <div class="row usercontent" style="padding-bottom: 10px">
+
+        <h1 id="welcome-user">&nbsp;&nbsp;&nbsp;Welcome <%= current_user.nickname %>
+            </div>
+        </h1>
+
+
+        <!-- <div class="col-lg-3" style="text-align:center; top: 25px;">
+            <span><%= image_tag session[:current_user]["image"] %></span>
+        </div> -->
+        <div class="col-lg-12" style="">
+          <hr>
+            <div class="user-image" style="text-align:center; top: 25px;">
+                <span><%= image_tag session[:current_user]["image"] %></span>
+            </div>
+            <!-- <br><p>Your current nickname is </p> -->
+            <!-- <h2 style="text-align:center"><%= current_user.nickname %></h2> -->
+            <div class="button-wrapper" style="">
+              <%= link_to "Your Profile", session[:current_user]["profileurl"], class: "ghost-button" %>
+            </div>
+​
+            <h4 class="no-margin-bottom no-margin-top" style=" text-align:center;">Rating: <span class="rating"><%= @current_user_rating %></span></h4>
+​
+​
+              <h4 class="no-margin-top" style="text-align:center"><strong>Your recently played games: </strong></h4>
+              <div class="recent-games-sidebyside" style="text-align:center" >
+              <% @games.each do |game| %>
+                <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
+​
+              <% end %>
+
+            </div>
+        </div>
+​
+          </div>
+        </div>
+
+
+
+        <div class="gamescolumn col-lg-6 animated slideInRight" style="float: right; width: 45%; height: auto;">
+          <h1 style="text-align: center; margin-bottom: 0">
+            Select a Game
+          </h1>
+          <!-- <div class="row"> -->
+​
+​
+            <% @games.each do |game| %>
+            <div class="col-lg-12" style="text-align:center;">
+                <hr>
+                <div class="col-lg-4 img-position" style="">
+                  <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= game.appid %>/<%= game.img_icon_url %>.jpg")/ style="width:50px; height:50px;"></a>
+                </div>
+                <div class="col-lg-8" style="margin-bottom:10px; ">
+                  <h2 class="game-header"><%= game.game_name %></h3>
+                  <p class="playtime"><%= game.playtime.to_i/60 %> hours in this game</p>
+                  <!--In order to display the game's icon, the 'appid' and the 'img_icon_url' were inserted inside a template steam url  -->
+                  <div class="button-wrapper" style="">
+                    <%= link_to "Find #{game.game_name} players",{controller: "games", action: "matchpage", id: game.appid}, class: "ghost-button", style: "width: 200px;" %>
+                  </div>
+                </div>
+            </div>
+            <% end %>
+          <!-- </div> -->
+        </div>
+      </div>
+​
+​
+    </div>
+  </div>
+​
+</body>
